@@ -23,7 +23,6 @@ namespace TravelManagement
             timerbook.Start();
         }
         int i = 0;
-        int previewcheck;
         private void timerbook_Tick(object sender, EventArgs e)
         {
             if(MyGlobal.ticketbook==1)
@@ -41,7 +40,6 @@ namespace TravelManagement
                     {
                         if (string.Equals(username, MyGlobal.username))
                         {
-
                             Durationtextbox.Text = dt.Rows[i]["duration"].ToString();
                             transporttextbox.Text = dt.Rows[i]["transport"].ToString();
                             accomodationtextbox.Text = dt.Rows[i]["accomodation"].ToString();
@@ -54,6 +52,7 @@ namespace TravelManagement
                             imagepicturebox.Text = dt.Rows[i]["picture"].ToString();
                             imagepicturebox.Image = Image.FromFile(imagepicturebox.Text);
                             MyGlobal.ticketbook = 0;
+                            MessageBox.Show(i.ToString());
 
                         }
                     }

@@ -50,9 +50,9 @@
             this.tourbutton3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
-            this.right = new System.Windows.Forms.Button();
             this.left = new System.Windows.Forms.Button();
+            this.right = new System.Windows.Forms.Button();
+            this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.bestpanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +87,7 @@
             // 
             this.detail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.detail.ForeColor = System.Drawing.Color.Black;
             this.detail.Location = new System.Drawing.Point(0, 0);
             this.detail.Name = "detail";
             this.detail.Size = new System.Drawing.Size(931, 435);
@@ -312,9 +313,19 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(886, 369);
             this.gunaShadowPanel1.TabIndex = 14;
             // 
-            // Refreshtimer
+            // left
             // 
-            this.Refreshtimer.Tick += new System.EventHandler(this.Refreshtimer_Tick);
+            this.left.BackColor = System.Drawing.Color.White;
+            this.left.BackgroundImage = global::TravelManagement.Properties.Resources.chevron_left_50px;
+            this.left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.left.FlatAppearance.BorderSize = 0;
+            this.left.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.left.Location = new System.Drawing.Point(5, 148);
+            this.left.Name = "left";
+            this.left.Size = new System.Drawing.Size(51, 49);
+            this.left.TabIndex = 2;
+            this.left.UseVisualStyleBackColor = false;
+            this.left.Click += new System.EventHandler(this.left_Click);
             // 
             // right
             // 
@@ -331,19 +342,9 @@
             this.right.UseVisualStyleBackColor = false;
             this.right.Click += new System.EventHandler(this.right_Click);
             // 
-            // left
+            // Refreshtimer
             // 
-            this.left.BackColor = System.Drawing.Color.White;
-            this.left.BackgroundImage = global::TravelManagement.Properties.Resources.chevron_left_50px;
-            this.left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.left.FlatAppearance.BorderSize = 0;
-            this.left.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.left.Location = new System.Drawing.Point(5, 148);
-            this.left.Name = "left";
-            this.left.Size = new System.Drawing.Size(51, 49);
-            this.left.TabIndex = 2;
-            this.left.UseVisualStyleBackColor = false;
-            this.left.Click += new System.EventHandler(this.left_Click);
+            this.Refreshtimer.Tick += new System.EventHandler(this.Refreshtimer_Tick);
             // 
             // tourinnepal
             // 

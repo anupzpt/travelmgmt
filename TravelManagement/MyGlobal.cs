@@ -62,6 +62,8 @@ namespace TravelManagement
         ////
         public static int inbox;
         public static int inboxuser;
+        /////////////
+        public static int bookingadmin;
 
 
 

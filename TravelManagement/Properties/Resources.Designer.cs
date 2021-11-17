@@ -283,6 +283,16 @@ namespace TravelManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_reset_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_reset_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_user_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-96", resourceCulture);

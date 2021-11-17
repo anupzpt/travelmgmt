@@ -35,47 +35,47 @@
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.specialimage = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.specialimagepicturebox = new System.Windows.Forms.PictureBox();
             this.homeimage = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.homeimagepicturebox = new System.Windows.Forms.PictureBox();
             this.trekimage = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.trekimagepicturebox = new System.Windows.Forms.PictureBox();
             this.tourimage = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.tourimagepicturebox = new System.Windows.Forms.PictureBox();
             this.specialpanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.specialpicturebox = new System.Windows.Forms.PictureBox();
             this.homepanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.homepicturebox = new System.Windows.Forms.PictureBox();
             this.trekpanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.trekpicturebox = new System.Windows.Forms.PictureBox();
             this.tourpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.tourpicturebox = new System.Windows.Forms.PictureBox();
             this.crosstimer = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.specialimagepicturebox = new System.Windows.Forms.PictureBox();
-            this.homeimagepicturebox = new System.Windows.Forms.PictureBox();
-            this.trekimagepicturebox = new System.Windows.Forms.PictureBox();
-            this.tourimagepicturebox = new System.Windows.Forms.PictureBox();
-            this.specialpicturebox = new System.Windows.Forms.PictureBox();
-            this.homepicturebox = new System.Windows.Forms.PictureBox();
-            this.trekpicturebox = new System.Windows.Forms.PictureBox();
-            this.tourpicturebox = new System.Windows.Forms.PictureBox();
             this.adminforntpagepanel.SuspendLayout();
             this.gunaShadowPanel1.SuspendLayout();
             this.specialimage.SuspendLayout();
-            this.homeimage.SuspendLayout();
-            this.trekimage.SuspendLayout();
-            this.tourimage.SuspendLayout();
-            this.specialpanel.SuspendLayout();
-            this.homepanel.SuspendLayout();
-            this.trekpanel.SuspendLayout();
-            this.tourpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.specialimagepicturebox)).BeginInit();
+            this.homeimage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeimagepicturebox)).BeginInit();
+            this.trekimage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trekimagepicturebox)).BeginInit();
+            this.tourimage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tourimagepicturebox)).BeginInit();
+            this.specialpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.specialpicturebox)).BeginInit();
+            this.homepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homepicturebox)).BeginInit();
+            this.trekpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trekpicturebox)).BeginInit();
+            this.tourpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tourpicturebox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +100,7 @@
             this.adminimage.Name = "adminimage";
             this.adminimage.Size = new System.Drawing.Size(905, 468);
             this.adminimage.TabIndex = 2;
+            this.adminimage.Visible = false;
             // 
             // admin
             // 
@@ -154,6 +155,18 @@
             this.label5.Text = "SPECIAL IMAGE";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // specialimagepicturebox
+            // 
+            this.specialimagepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.specialimagepicturebox.Image = global::TravelManagement.Properties.Resources.london;
+            this.specialimagepicturebox.Location = new System.Drawing.Point(0, 0);
+            this.specialimagepicturebox.Name = "specialimagepicturebox";
+            this.specialimagepicturebox.Size = new System.Drawing.Size(226, 180);
+            this.specialimagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.specialimagepicturebox.TabIndex = 3;
+            this.specialimagepicturebox.TabStop = false;
+            this.specialimagepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.specialimagepicturebox_MouseDown);
+            // 
             // homeimage
             // 
             this.homeimage.Controls.Add(this.label6);
@@ -174,6 +187,18 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "HOME IMAGE";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // homeimagepicturebox
+            // 
+            this.homeimagepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homeimagepicturebox.Image = global::TravelManagement.Properties.Resources.hompageimage;
+            this.homeimagepicturebox.Location = new System.Drawing.Point(0, 0);
+            this.homeimagepicturebox.Name = "homeimagepicturebox";
+            this.homeimagepicturebox.Size = new System.Drawing.Size(226, 180);
+            this.homeimagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.homeimagepicturebox.TabIndex = 3;
+            this.homeimagepicturebox.TabStop = false;
+            this.homeimagepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.homeimagepicturebox_MouseDown);
             // 
             // trekimage
             // 
@@ -196,6 +221,18 @@
             this.label7.Text = "TREKKING IMAGE";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // trekimagepicturebox
+            // 
+            this.trekimagepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.trekimagepicturebox.Image = global::TravelManagement.Properties.Resources.Mardi_Himal_Trek;
+            this.trekimagepicturebox.Location = new System.Drawing.Point(0, 0);
+            this.trekimagepicturebox.Name = "trekimagepicturebox";
+            this.trekimagepicturebox.Size = new System.Drawing.Size(226, 180);
+            this.trekimagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.trekimagepicturebox.TabIndex = 3;
+            this.trekimagepicturebox.TabStop = false;
+            this.trekimagepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trekimagepicturebox_MouseDown);
+            // 
             // tourimage
             // 
             this.tourimage.Controls.Add(this.label8);
@@ -216,6 +253,18 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "TOUR IMAGE";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tourimagepicturebox
+            // 
+            this.tourimagepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tourimagepicturebox.Image = global::TravelManagement.Properties.Resources.ahokpillar;
+            this.tourimagepicturebox.Location = new System.Drawing.Point(0, 0);
+            this.tourimagepicturebox.Name = "tourimagepicturebox";
+            this.tourimagepicturebox.Size = new System.Drawing.Size(226, 180);
+            this.tourimagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tourimagepicturebox.TabIndex = 4;
+            this.tourimagepicturebox.TabStop = false;
+            this.tourimagepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tourimagepicturebox_MouseDown);
             // 
             // specialpanel
             // 
@@ -238,6 +287,18 @@
             this.label3.Text = "SPECIAL";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // specialpicturebox
+            // 
+            this.specialpicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.specialpicturebox.Image = global::TravelManagement.Properties.Resources.maldives;
+            this.specialpicturebox.Location = new System.Drawing.Point(0, 0);
+            this.specialpicturebox.Name = "specialpicturebox";
+            this.specialpicturebox.Size = new System.Drawing.Size(226, 180);
+            this.specialpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.specialpicturebox.TabIndex = 3;
+            this.specialpicturebox.TabStop = false;
+            this.specialpicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.specialpicturebox_MouseDown);
+            // 
             // homepanel
             // 
             this.homepanel.Controls.Add(this.label4);
@@ -258,6 +319,18 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "HOME";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // homepicturebox
+            // 
+            this.homepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homepicturebox.Image = global::TravelManagement.Properties.Resources.chitwan;
+            this.homepicturebox.Location = new System.Drawing.Point(0, 0);
+            this.homepicturebox.Name = "homepicturebox";
+            this.homepicturebox.Size = new System.Drawing.Size(226, 180);
+            this.homepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.homepicturebox.TabIndex = 4;
+            this.homepicturebox.TabStop = false;
+            this.homepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.homepicturebox_MouseDown);
             // 
             // trekpanel
             // 
@@ -280,6 +353,18 @@
             this.label2.Text = "TREKKING";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // trekpicturebox
+            // 
+            this.trekpicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.trekpicturebox.Image = global::TravelManagement.Properties.Resources.upper_mustang_trek;
+            this.trekpicturebox.Location = new System.Drawing.Point(0, 0);
+            this.trekpicturebox.Name = "trekpicturebox";
+            this.trekpicturebox.Size = new System.Drawing.Size(226, 180);
+            this.trekpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.trekpicturebox.TabIndex = 3;
+            this.trekpicturebox.TabStop = false;
+            this.trekpicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trekpicturebox_MouseDown);
+            // 
             // tourpanel
             // 
             this.tourpanel.Controls.Add(this.label1);
@@ -301,98 +386,6 @@
             this.label1.Text = "TOUR ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // crosstimer
-            // 
-            this.crosstimer.Tick += new System.EventHandler(this.crosstimer_Tick);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // specialimagepicturebox
-            // 
-            this.specialimagepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.specialimagepicturebox.Image = global::TravelManagement.Properties.Resources.london;
-            this.specialimagepicturebox.Location = new System.Drawing.Point(0, 0);
-            this.specialimagepicturebox.Name = "specialimagepicturebox";
-            this.specialimagepicturebox.Size = new System.Drawing.Size(226, 180);
-            this.specialimagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.specialimagepicturebox.TabIndex = 3;
-            this.specialimagepicturebox.TabStop = false;
-            this.specialimagepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.specialimagepicturebox_MouseDown);
-            // 
-            // homeimagepicturebox
-            // 
-            this.homeimagepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homeimagepicturebox.Image = global::TravelManagement.Properties.Resources.hompageimage;
-            this.homeimagepicturebox.Location = new System.Drawing.Point(0, 0);
-            this.homeimagepicturebox.Name = "homeimagepicturebox";
-            this.homeimagepicturebox.Size = new System.Drawing.Size(226, 180);
-            this.homeimagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.homeimagepicturebox.TabIndex = 3;
-            this.homeimagepicturebox.TabStop = false;
-            this.homeimagepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.homeimagepicturebox_MouseDown);
-            // 
-            // trekimagepicturebox
-            // 
-            this.trekimagepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.trekimagepicturebox.Image = global::TravelManagement.Properties.Resources.Mardi_Himal_Trek;
-            this.trekimagepicturebox.Location = new System.Drawing.Point(0, 0);
-            this.trekimagepicturebox.Name = "trekimagepicturebox";
-            this.trekimagepicturebox.Size = new System.Drawing.Size(226, 180);
-            this.trekimagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.trekimagepicturebox.TabIndex = 3;
-            this.trekimagepicturebox.TabStop = false;
-            this.trekimagepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trekimagepicturebox_MouseDown);
-            // 
-            // tourimagepicturebox
-            // 
-            this.tourimagepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tourimagepicturebox.Image = global::TravelManagement.Properties.Resources.ahokpillar;
-            this.tourimagepicturebox.Location = new System.Drawing.Point(0, 0);
-            this.tourimagepicturebox.Name = "tourimagepicturebox";
-            this.tourimagepicturebox.Size = new System.Drawing.Size(226, 180);
-            this.tourimagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tourimagepicturebox.TabIndex = 4;
-            this.tourimagepicturebox.TabStop = false;
-            this.tourimagepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tourimagepicturebox_MouseDown);
-            // 
-            // specialpicturebox
-            // 
-            this.specialpicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.specialpicturebox.Image = global::TravelManagement.Properties.Resources.maldives;
-            this.specialpicturebox.Location = new System.Drawing.Point(0, 0);
-            this.specialpicturebox.Name = "specialpicturebox";
-            this.specialpicturebox.Size = new System.Drawing.Size(226, 180);
-            this.specialpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.specialpicturebox.TabIndex = 3;
-            this.specialpicturebox.TabStop = false;
-            this.specialpicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.specialpicturebox_MouseDown);
-            // 
-            // homepicturebox
-            // 
-            this.homepicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homepicturebox.Image = global::TravelManagement.Properties.Resources.chitwan;
-            this.homepicturebox.Location = new System.Drawing.Point(0, 0);
-            this.homepicturebox.Name = "homepicturebox";
-            this.homepicturebox.Size = new System.Drawing.Size(226, 180);
-            this.homepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.homepicturebox.TabIndex = 4;
-            this.homepicturebox.TabStop = false;
-            this.homepicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.homepicturebox_MouseDown);
-            // 
-            // trekpicturebox
-            // 
-            this.trekpicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.trekpicturebox.Image = global::TravelManagement.Properties.Resources.upper_mustang_trek;
-            this.trekpicturebox.Location = new System.Drawing.Point(0, 0);
-            this.trekpicturebox.Name = "trekpicturebox";
-            this.trekpicturebox.Size = new System.Drawing.Size(226, 180);
-            this.trekpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.trekpicturebox.TabIndex = 3;
-            this.trekpicturebox.TabStop = false;
-            this.trekpicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trekpicturebox_MouseDown);
-            // 
             // tourpicturebox
             // 
             this.tourpicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -404,6 +397,14 @@
             this.tourpicturebox.TabIndex = 3;
             this.tourpicturebox.TabStop = false;
             this.tourpicturebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tourpicturebox_MouseDown);
+            // 
+            // crosstimer
+            // 
+            this.crosstimer.Tick += new System.EventHandler(this.crosstimer_Tick);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // adminforntpage
             // 
@@ -417,27 +418,27 @@
             this.gunaShadowPanel1.ResumeLayout(false);
             this.specialimage.ResumeLayout(false);
             this.specialimage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.specialimagepicturebox)).EndInit();
             this.homeimage.ResumeLayout(false);
             this.homeimage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeimagepicturebox)).EndInit();
             this.trekimage.ResumeLayout(false);
             this.trekimage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trekimagepicturebox)).EndInit();
             this.tourimage.ResumeLayout(false);
             this.tourimage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tourimagepicturebox)).EndInit();
             this.specialpanel.ResumeLayout(false);
             this.specialpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.specialpicturebox)).EndInit();
             this.homepanel.ResumeLayout(false);
             this.homepanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homepicturebox)).EndInit();
             this.trekpanel.ResumeLayout(false);
             this.trekpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trekpicturebox)).EndInit();
             this.tourpanel.ResumeLayout(false);
             this.tourpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.specialimagepicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeimagepicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trekimagepicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourimagepicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.specialpicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homepicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trekpicturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourpicturebox)).EndInit();
             this.ResumeLayout(false);
 

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.userlabel = new System.Windows.Forms.Label();
             this.logoutbutton = new Guna.UI.WinForms.GunaButton();
             this.passwordbutton = new Guna.UI.WinForms.GunaButton();
             this.emailbutton = new Guna.UI.WinForms.GunaButton();
             this.profilebutton = new Guna.UI.WinForms.GunaButton();
+            this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
             this.gunaShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,6 +173,10 @@
             this.profilebutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.profilebutton.Click += new System.EventHandler(this.profilebutton_Click);
             // 
+            // RefreshTimer
+            // 
+            this.RefreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
+            // 
             // afterloggeduser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,5 +199,6 @@
         private Guna.UI.WinForms.GunaButton passwordbutton;
         private Guna.UI.WinForms.GunaButton emailbutton;
         private Guna.UI.WinForms.GunaButton profilebutton;
+        private System.Windows.Forms.Timer RefreshTimer;
     }
 }

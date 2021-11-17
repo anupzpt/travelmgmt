@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.usertextbox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.registerpanel = new System.Windows.Forms.Panel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.loginhere = new Guna.UI.WinForms.GunaLinkLabel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.donthaveaccount = new Guna.UI.WinForms.GunaLinkLabel();
-            this.passwordtextbox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.usertextbox = new Guna.UI.WinForms.GunaLineTextBox();
+            this.passwordtextbox = new Guna.UI.WinForms.GunaLineTextBox();
+            this.eye2 = new Guna.UI.WinForms.GunaCircleButton();
+            this.eye = new Guna.UI.WinForms.GunaCircleButton();
             this.loginbutton = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaCircleButton2 = new Guna.UI.WinForms.GunaCircleButton();
             this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
+            this.Eyetimer = new System.Windows.Forms.Timer(this.components);
             this.register = new TravelManagement.register();
             this.panel1.SuspendLayout();
             this.registerpanel.SuspendLayout();
@@ -51,35 +54,12 @@
             this.gunaShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // usertextbox
-            // 
-            this.usertextbox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.usertextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.usertextbox.Font = new System.Drawing.Font("Playfair Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usertextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.usertextbox.HintForeColor = System.Drawing.Color.Empty;
-            this.usertextbox.HintText = "";
-            this.usertextbox.isPassword = false;
-            this.usertextbox.LineFocusedColor = System.Drawing.Color.DodgerBlue;
-            this.usertextbox.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.usertextbox.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
-            this.usertextbox.LineThickness = 2;
-            this.usertextbox.Location = new System.Drawing.Point(102, 70);
-            this.usertextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.usertextbox.Name = "usertextbox";
-            this.usertextbox.Size = new System.Drawing.Size(223, 42);
-            this.usertextbox.TabIndex = 0;
-            this.usertextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.usertextbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.usertextbox_MouseDown);
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.registerpanel);
             this.panel1.Controls.Add(this.gunaPanel1);
-            this.panel1.Controls.Add(this.passwordtextbox);
             this.panel1.Controls.Add(this.gunaLabel1);
-            this.panel1.Controls.Add(this.usertextbox);
             this.panel1.Controls.Add(this.gunaShadowPanel1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -90,7 +70,7 @@
             // 
             this.registerpanel.Controls.Add(this.gunaPanel2);
             this.registerpanel.Controls.Add(this.register);
-            this.registerpanel.Location = new System.Drawing.Point(0, 0);
+            this.registerpanel.Location = new System.Drawing.Point(-1, 0);
             this.registerpanel.Name = "registerpanel";
             this.registerpanel.Size = new System.Drawing.Size(383, 370);
             this.registerpanel.TabIndex = 8;
@@ -136,27 +116,6 @@
             this.donthaveaccount.Text = "Dont Have Account? Register Here";
             this.donthaveaccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.donthaveaccount_LinkClicked);
             // 
-            // passwordtextbox
-            // 
-            this.passwordtextbox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.passwordtextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passwordtextbox.Font = new System.Drawing.Font("Playfair Display", 14.25F, System.Drawing.FontStyle.Bold);
-            this.passwordtextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.passwordtextbox.HintForeColor = System.Drawing.Color.Empty;
-            this.passwordtextbox.HintText = "";
-            this.passwordtextbox.isPassword = true;
-            this.passwordtextbox.LineFocusedColor = System.Drawing.Color.DodgerBlue;
-            this.passwordtextbox.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.passwordtextbox.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
-            this.passwordtextbox.LineThickness = 2;
-            this.passwordtextbox.Location = new System.Drawing.Point(100, 139);
-            this.passwordtextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.passwordtextbox.Name = "passwordtextbox";
-            this.passwordtextbox.Size = new System.Drawing.Size(225, 44);
-            this.passwordtextbox.TabIndex = 1;
-            this.passwordtextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.passwordtextbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passwordtextbox_MouseDown);
-            // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
@@ -171,6 +130,10 @@
             // 
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaShadowPanel1.Controls.Add(this.usertextbox);
+            this.gunaShadowPanel1.Controls.Add(this.passwordtextbox);
+            this.gunaShadowPanel1.Controls.Add(this.eye2);
+            this.gunaShadowPanel1.Controls.Add(this.eye);
             this.gunaShadowPanel1.Controls.Add(this.loginbutton);
             this.gunaShadowPanel1.Controls.Add(this.gunaCircleButton2);
             this.gunaShadowPanel1.Controls.Add(this.gunaCircleButton1);
@@ -180,6 +143,86 @@
             this.gunaShadowPanel1.ShadowDepth = 200;
             this.gunaShadowPanel1.Size = new System.Drawing.Size(338, 283);
             this.gunaShadowPanel1.TabIndex = 6;
+            // 
+            // usertextbox
+            // 
+            this.usertextbox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.usertextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.usertextbox.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.usertextbox.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usertextbox.ForeColor = System.Drawing.Color.Black;
+            this.usertextbox.LineColor = System.Drawing.Color.Gray;
+            this.usertextbox.Location = new System.Drawing.Point(79, 35);
+            this.usertextbox.Name = "usertextbox";
+            this.usertextbox.PasswordChar = '\0';
+            this.usertextbox.SelectedText = "";
+            this.usertextbox.Size = new System.Drawing.Size(237, 31);
+            this.usertextbox.TabIndex = 8;
+            this.usertextbox.Text = "USERNAME";
+            this.usertextbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.usertextbox_MouseDown);
+            // 
+            // passwordtextbox
+            // 
+            this.passwordtextbox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.passwordtextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.passwordtextbox.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.passwordtextbox.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordtextbox.ForeColor = System.Drawing.Color.Black;
+            this.passwordtextbox.LineColor = System.Drawing.Color.Gray;
+            this.passwordtextbox.Location = new System.Drawing.Point(79, 103);
+            this.passwordtextbox.Name = "passwordtextbox";
+            this.passwordtextbox.PasswordChar = '\0';
+            this.passwordtextbox.SelectedText = "";
+            this.passwordtextbox.Size = new System.Drawing.Size(211, 31);
+            this.passwordtextbox.TabIndex = 8;
+            this.passwordtextbox.Text = "PASSWORD";
+            this.passwordtextbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passwordtextbox_MouseDown);
+            // 
+            // eye2
+            // 
+            this.eye2.AnimationHoverSpeed = 0.07F;
+            this.eye2.AnimationSpeed = 0.03F;
+            this.eye2.BaseColor = System.Drawing.Color.Transparent;
+            this.eye2.BorderColor = System.Drawing.Color.Black;
+            this.eye2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.eye2.FocusedColor = System.Drawing.Color.Empty;
+            this.eye2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.eye2.ForeColor = System.Drawing.Color.White;
+            this.eye2.Image = global::TravelManagement.Properties.Resources.eye_24px;
+            this.eye2.ImageSize = new System.Drawing.Size(30, 30);
+            this.eye2.Location = new System.Drawing.Point(294, 90);
+            this.eye2.Name = "eye2";
+            this.eye2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.eye2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.eye2.OnHoverForeColor = System.Drawing.Color.White;
+            this.eye2.OnHoverImage = null;
+            this.eye2.OnPressedColor = System.Drawing.Color.Black;
+            this.eye2.Size = new System.Drawing.Size(35, 37);
+            this.eye2.TabIndex = 16;
+            this.eye2.Click += new System.EventHandler(this.eye2_Click);
+            // 
+            // eye
+            // 
+            this.eye.AnimationHoverSpeed = 0.07F;
+            this.eye.AnimationSpeed = 0.03F;
+            this.eye.BaseColor = System.Drawing.Color.Transparent;
+            this.eye.BorderColor = System.Drawing.Color.Black;
+            this.eye.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.eye.FocusedColor = System.Drawing.Color.Empty;
+            this.eye.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.eye.ForeColor = System.Drawing.Color.White;
+            this.eye.Image = global::TravelManagement.Properties.Resources.eye_24px;
+            this.eye.ImageSize = new System.Drawing.Size(30, 30);
+            this.eye.Location = new System.Drawing.Point(294, 90);
+            this.eye.Name = "eye";
+            this.eye.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.eye.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.eye.OnHoverForeColor = System.Drawing.Color.White;
+            this.eye.OnHoverImage = null;
+            this.eye.OnPressedColor = System.Drawing.Color.Black;
+            this.eye.Size = new System.Drawing.Size(35, 37);
+            this.eye.TabIndex = 15;
+            this.eye.Click += new System.EventHandler(this.eye_Click);
             // 
             // loginbutton
             // 
@@ -254,9 +297,13 @@
             this.gunaCircleButton1.Size = new System.Drawing.Size(52, 52);
             this.gunaCircleButton1.TabIndex = 2;
             // 
+            // Eyetimer
+            // 
+            this.Eyetimer.Tick += new System.EventHandler(this.Eyetimer_Tick);
+            // 
             // register
             // 
-            this.register.Location = new System.Drawing.Point(-1, 2);
+            this.register.Location = new System.Drawing.Point(0, 0);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(383, 370);
             this.register.TabIndex = 0;
@@ -283,12 +330,9 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuMaterialTextbox usertextbox;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaLinkLabel donthaveaccount;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox passwordtextbox;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
         private Guna.UI.WinForms.GunaCircleButton gunaCircleButton2;
@@ -299,5 +343,10 @@
         private Guna.UI.WinForms.GunaGradientButton loginbutton;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private Guna.UI.WinForms.GunaLinkLabel loginhere;
+        private Guna.UI.WinForms.GunaCircleButton eye;
+        private Guna.UI.WinForms.GunaCircleButton eye2;
+        private System.Windows.Forms.Timer Eyetimer;
+        private Guna.UI.WinForms.GunaLineTextBox passwordtextbox;
+        private Guna.UI.WinForms.GunaLineTextBox usertextbox;
     }
 }

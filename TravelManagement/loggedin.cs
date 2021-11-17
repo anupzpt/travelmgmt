@@ -27,8 +27,10 @@ namespace TravelManagement
         {
             
             registerpanel.Visible = false;
-           // passwordtextbox.UseSystemPasswordChar = true;
-
+            passwordtextbox.UseSystemPasswordChar = true;
+            Eyetimer.Start();
+            eye2.SendToBack();
+           
         }
 
 
@@ -54,18 +56,20 @@ namespace TravelManagement
                     {
                         MyGlobal.admin = 1;
                         MyGlobal.user = 0;
-
+                       
                     }
                     if (string.Equals(verify, "user"))
                     {
                         MyGlobal.user = 1;
                         MyGlobal.admin = 0;
                     }
+                    MyGlobal.userlogout = 2;
                 }
                 else
                 {
                     MessageBox.Show(" LOGIN UNSUCCESSFUL ");
-
+                    usertextbox.Text = null;
+                    passwordtextbox.Text = null;
                 }
             }
             catch (Exception) { }
@@ -91,14 +95,45 @@ namespace TravelManagement
 
         
 
+              
+        int viewbutton = 0;
+        private void eye_Click(object sender, EventArgs e)
+        {
+            viewbutton = 1;
+            eye2.BringToFront();
+            eye.SendToBack();
+        }
+
+        private void eye2_Click(object sender, EventArgs e)
+        {
+            viewbutton = 2;
+            eye.BringToFront();
+            eye2.SendToBack();
+        }
+
+        private void Eyetimer_Tick(object sender, EventArgs e)
+        {
+            if (viewbutton == 1)
+            {
+                passwordtextbox.UseSystemPasswordChar = false;
+
+                viewbutton = 0;
+            }
+            if (viewbutton == 2)
+            {
+                passwordtextbox.UseSystemPasswordChar = true;
+                viewbutton = 0;
+            }
+        }
+
         private void usertextbox_MouseDown(object sender, MouseEventArgs e)
         {
-            usertextbox = null;
+            usertextbox.Text = null;
         }
 
         private void passwordtextbox_MouseDown(object sender, MouseEventArgs e)
         {
-            passwordtextbox = null;
+            passwordtextbox.Text = null;
         }
     }
 }

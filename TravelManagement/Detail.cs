@@ -96,6 +96,7 @@ namespace TravelManagement
 
                 }
             }
+            
             if (MyGlobal.specialbuttonpressed == 1)
             {
                 try
@@ -203,53 +204,57 @@ namespace TravelManagement
 
         private void Bookbutton_Click(object sender, EventArgs e)
         {
-            if (nametextbox.Text==null||Phone.Text==null||Email.Text==null||Quantity.Text==null)
+            if (string.Equals(nametextbox.Text, "Name") || string.Equals(Phone.Text, "Mobile Number") || string.Equals(Email.Text, "Email") || string.Equals(Quantity.Text, "Quantity") || string.Equals(nametextbox.Text, null) || string.Equals(Phone.Text, null) || string.Equals(Email.Text, null) || string.Equals(Quantity.Text, null))
             {
-                Bookbutton.Enabled = false;
-            }
-            
-            MyGlobal.displaybooked = 1;
-            if (MyGlobal.loginsucess == 1 || MyGlobal.loginsucess == 2)
-            {
-
-                //SqlConnection con = new SqlConnection(MyGlobal.constring);
-                //try
-                //{
-                //    con.Open();
-                //    string query = "insert into booking (name,number,email,date,quantity,location,duration,transport,accomodation,tripprice) Values" +
-                //        " ('" + nametextbox.Text + "','" + Phone.Text + "','" + Email.Text + "','" + date.Text + "'," +
-                //        "'" + Quantity.Text + "','" + location + "','" + duration1 + "','" + transport1 + "','" + accomodation1 + "'," +
-                //        "'" + tripprice1 + "')";
-                //    SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                //    sda.SelectCommand.ExecuteNonQuery();
-                //}
-                //catch (Exception)
-                //{
-
-                //}
-                bookedconform.Visible = true;
-                cancel.Visible = true;
-                MyGlobal.name = nametextbox.Text;
-                MyGlobal.number = Phone.Text;
-                MyGlobal.email = Email.Text;
-                MyGlobal.date = date.Text;
-                MyGlobal.quantity = Quantity.Text;
-                MyGlobal.location = location;
-                MyGlobal.duration = duration1;
-                MyGlobal.transport = transport1;
-                MyGlobal.accomodation = accomodation1;
-                MyGlobal.tripprice = tripprice1;
-               
+                label2.Text = "Invalid data or null value not accepted ";
+                label2.Visible = true;
             }
             else
             {
-                MyGlobal.displayloginpage = 1;
+                label2.Visible = false;
+
+                MyGlobal.displaybooked = 1;
+                if (MyGlobal.loginsucess == 1 || MyGlobal.loginsucess == 2)
+                {
+
+                    //SqlConnection con = new SqlConnection(MyGlobal.constring);
+                    //try
+                    //{
+                    //    con.Open();
+                    //    string query = "insert into booking (name,number,email,date,quantity,location,duration,transport,accomodation,tripprice) Values" +
+                    //        " ('" + nametextbox.Text + "','" + Phone.Text + "','" + Email.Text + "','" + date.Text + "'," +
+                    //        "'" + Quantity.Text + "','" + location + "','" + duration1 + "','" + transport1 + "','" + accomodation1 + "'," +
+                    //        "'" + tripprice1 + "')";
+                    //    SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                    //    sda.SelectCommand.ExecuteNonQuery();
+                    //}
+                    //catch (Exception)
+                    //{
+
+                    //}
+                    bookedconform.Visible = true;
+                    cancel.Visible = true;
+                    MyGlobal.name = nametextbox.Text;
+                    MyGlobal.number = Phone.Text;
+                    MyGlobal.email = Email.Text;
+                    MyGlobal.date = date.Text;
+                    MyGlobal.quantity = Quantity.Text;
+                    MyGlobal.location = location;
+                    MyGlobal.duration = duration1;
+                    MyGlobal.transport = transport1;
+                    MyGlobal.accomodation = accomodation1;
+                    MyGlobal.tripprice = tripprice1;
+
+                }
+                else
+                {
+                    MyGlobal.displayloginpage = 1;
+                }
             }
-           
-            nametextbox.Text = "NAME";
-            Phone.Text = "MOBILE NUMBER";
-            Email.Text = "EMAIL";
-            Quantity.Text = "QUANTITY";
+            nametextbox.Text = "Name";
+            Phone.Text ="Mobile Number";
+            Email.Text = "Email";
+            Quantity.Text = "Quantity";
             date.Text = "DATE";
         }
 
@@ -339,7 +344,7 @@ namespace TravelManagement
 
         private void nametextbox_TextChanged(object sender, EventArgs e)
         {
-          
+           
         }
     }
 }

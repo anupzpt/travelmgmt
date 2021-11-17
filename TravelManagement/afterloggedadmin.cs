@@ -58,7 +58,7 @@ namespace TravelManagement
 
         private void bookeddatabutton_Click(object sender, EventArgs e)
         {
-
+            MyGlobal.bookingadmin = 1;
         }
 
         private void emailbutton_Click(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace TravelManagement
 
         private void passwordbutton_Click(object sender, EventArgs e)
         {
-            
+            MyGlobal.changepassword = 1;
         }
 
         private void modifydetailbutton_Click(object sender, EventArgs e)

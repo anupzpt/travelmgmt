@@ -40,14 +40,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.eye2 = new Guna.UI.WinForms.GunaCircleButton();
             this.timereye = new System.Windows.Forms.Timer(this.components);
+            this.designpanel = new System.Windows.Forms.Panel();
             this.gunaShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaShadowPanel1
             // 
-            this.gunaShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.gunaShadowPanel1.Controls.Add(this.eye);
@@ -59,12 +58,12 @@
             this.gunaShadowPanel1.Controls.Add(this.gunaCircleButton1);
             this.gunaShadowPanel1.Controls.Add(this.pictureBox1);
             this.gunaShadowPanel1.Controls.Add(this.eye2);
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(20, 15);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(475, 43);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
-            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.SeaGreen;
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.SystemColors.Desktop;
             this.gunaShadowPanel1.ShadowDepth = 200;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(356, 359);
-            this.gunaShadowPanel1.TabIndex = 1;
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(390, 400);
+            this.gunaShadowPanel1.TabIndex = 0;
             // 
             // eye
             // 
@@ -78,7 +77,7 @@
             this.eye.ForeColor = System.Drawing.Color.White;
             this.eye.Image = global::TravelManagement.Properties.Resources.eye_24px;
             this.eye.ImageSize = new System.Drawing.Size(30, 30);
-            this.eye.Location = new System.Drawing.Point(297, 209);
+            this.eye.Location = new System.Drawing.Point(306, 243);
             this.eye.Name = "eye";
             this.eye.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.eye.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -103,7 +102,7 @@
             this.savebutton.ForeColor = System.Drawing.Color.White;
             this.savebutton.Image = null;
             this.savebutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.savebutton.Location = new System.Drawing.Point(129, 293);
+            this.savebutton.Location = new System.Drawing.Point(137, 322);
             this.savebutton.Name = "savebutton";
             this.savebutton.OnHoverBaseColor1 = System.Drawing.Color.LightGray;
             this.savebutton.OnHoverBaseColor2 = System.Drawing.Color.DarkGray;
@@ -142,7 +141,7 @@
             this.password.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.ForeColor = System.Drawing.Color.Black;
             this.password.LineColor = System.Drawing.Color.Gainsboro;
-            this.password.Location = new System.Drawing.Point(95, 215);
+            this.password.Location = new System.Drawing.Point(104, 249);
             this.password.Name = "password";
             this.password.PasswordChar = '\0';
             this.password.SelectedText = "";
@@ -158,7 +157,7 @@
             this.usernametext.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernametext.ForeColor = System.Drawing.Color.Black;
             this.usernametext.LineColor = System.Drawing.Color.Gainsboro;
-            this.usernametext.Location = new System.Drawing.Point(95, 155);
+            this.usernametext.Location = new System.Drawing.Point(104, 189);
             this.usernametext.Name = "usernametext";
             this.usernametext.PasswordChar = '\0';
             this.usernametext.SelectedText = "";
@@ -178,7 +177,7 @@
             this.gunaCircleButton2.ForeColor = System.Drawing.Color.White;
             this.gunaCircleButton2.Image = global::TravelManagement.Properties.Resources.locked;
             this.gunaCircleButton2.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaCircleButton2.Location = new System.Drawing.Point(25, 204);
+            this.gunaCircleButton2.Location = new System.Drawing.Point(34, 238);
             this.gunaCircleButton2.Name = "gunaCircleButton2";
             this.gunaCircleButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaCircleButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -200,7 +199,7 @@
             this.gunaCircleButton1.ForeColor = System.Drawing.Color.White;
             this.gunaCircleButton1.Image = global::TravelManagement.Properties.Resources.icons8_user_96;
             this.gunaCircleButton1.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaCircleButton1.Location = new System.Drawing.Point(25, 146);
+            this.gunaCircleButton1.Location = new System.Drawing.Point(34, 180);
             this.gunaCircleButton1.Name = "gunaCircleButton1";
             this.gunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaCircleButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -213,7 +212,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TravelManagement.Properties.Resources.adminn;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(129, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -232,7 +231,7 @@
             this.eye2.ForeColor = System.Drawing.Color.White;
             this.eye2.Image = global::TravelManagement.Properties.Resources.eye_24px;
             this.eye2.ImageSize = new System.Drawing.Size(30, 30);
-            this.eye2.Location = new System.Drawing.Point(297, 209);
+            this.eye2.Location = new System.Drawing.Point(306, 243);
             this.eye2.Name = "eye2";
             this.eye2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.eye2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -247,13 +246,26 @@
             // 
             this.timereye.Tick += new System.EventHandler(this.timereye_Tick);
             // 
+            // designpanel
+            // 
+            this.designpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.designpanel.BackgroundImage = global::TravelManagement.Properties.Resources.admin;
+            this.designpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.designpanel.Location = new System.Drawing.Point(0, 0);
+            this.designpanel.Name = "designpanel";
+            this.designpanel.Size = new System.Drawing.Size(900, 471);
+            this.designpanel.TabIndex = 3;
+            // 
             // addnewadmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gunaShadowPanel1);
+            this.Controls.Add(this.designpanel);
             this.Name = "addnewadmin";
-            this.Size = new System.Drawing.Size(396, 396);
+            this.Size = new System.Drawing.Size(900, 471);
             this.Load += new System.EventHandler(this.addnewadmin_Load);
             this.gunaShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -274,5 +286,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaCircleButton eye2;
         private System.Windows.Forms.Timer timereye;
+        private System.Windows.Forms.Panel designpanel;
     }
 }

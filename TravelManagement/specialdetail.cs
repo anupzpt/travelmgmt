@@ -92,13 +92,7 @@ namespace TravelManagement
 
         }
 
-        /// <summary>
-        /// /////////////////////
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        /// 
-
+      
 
 
         private void specialbutton1_Click(object sender, EventArgs e)
@@ -156,5 +150,109 @@ namespace TravelManagement
                 MyGlobal.closedetail = 0;
             }
         }
+        int countrightclick = 1;
+        int countleftclick = 0;
+        private void left_Click(object sender, EventArgs e)
+        {
+            if (countleftclick == 0)            {                SN = SN - 5;                countleftclick++;                countrightclick = 0;            }
+            SqlConnection con = new SqlConnection(MyGlobal.constring);
+            con.Open();
+            int count = 1;
+            for (int i = 1; i <= 4; i++)
+            {
+                try
+                {
+                    string image = "Select * from specialchangepanel";
+                    SqlDataAdapter sda = new SqlDataAdapter(image, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    string destination = dt.Rows[SN]["Location"].ToString();
+                    string label = dt.Rows[SN]["Pricelabel"].ToString();
+                    string bestpanel = dt.Rows[SN]["Picture"].ToString();
+                    button1value = dt.Rows[SN]["SN"].ToString();
+                    if (count == 1)                    {                        SN = SN - 1;
+                        pictureBox4.Image = Image.FromFile(bestpanel);
+                        specialbutton4.Text = destination;
+                        speciallabel4.Text = label;
+                    }                    if (count == 2)                    {                        SN = SN - 1;
+                        pictureBox3.Image = Image.FromFile(bestpanel);
+                        specialbutton3.Text = destination;
+                        speciallabel3.Text = label;
+                    }                    if (count == 3)                    {                        SN = SN - 1;
+                        pictureBox2.Image = Image.FromFile(bestpanel);
+                        specialbutton2.Text = destination;
+                        speciallabel2.Text = label;
+                    }                    if (count == 4)                    {                        SN = SN - 1;
+                        pictureBox1.Image = Image.FromFile(bestpanel);
+                        specialbutton1.Text = destination;
+                        speciallabel1.Text = label;
+                        count = 1;                    }                    count++;
+
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+
+        }
+
+        private void right_Click(object sender, EventArgs e)
+        {
+            if (countrightclick == 0)
+            {
+                SN = SN + 5;
+                countleftclick = 0;
+                countrightclick++;
+            }
+            SqlConnection con = new SqlConnection(MyGlobal.constring);
+            con.Open();
+            int count = 1;
+            for (int i = 1; i <= 4; i++)
+            {
+                try
+                {
+                    string image = "Select * from specialchangepanel";
+                    SqlDataAdapter sda = new SqlDataAdapter(image, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    string destination = dt.Rows[SN]["Location"].ToString();
+                    string label = dt.Rows[SN]["Pricelabel"].ToString();
+                    string bestpanel = dt.Rows[SN]["Picture"].ToString();
+                    button1value = dt.Rows[SN]["SN"].ToString();
+                    if (count == 1)                    {                        SN = SN + 1;
+                        pictureBox1.Image = Image.FromFile(bestpanel);
+                        specialbutton1.Text = destination;
+                        speciallabel1.Text = label;
+                    }                    if (count == 2)                    {                        SN = SN + 1;
+                        pictureBox2.Image = Image.FromFile(bestpanel);
+                        specialbutton2.Text = destination;
+                        speciallabel2.Text = label;
+                    }                    if (count == 3)                    {                        SN = SN + 1;
+                        pictureBox3.Image = Image.FromFile(bestpanel);
+                        specialbutton3.Text = destination;
+                        speciallabel3.Text = label;
+                    }                    if (count == 4)                    {                        SN = SN + 1;
+                        pictureBox4.Image = Image.FromFile(bestpanel);
+                        specialbutton4.Text = destination;
+                        speciallabel4.Text = label;
+                        count = 1;                    }                    count++;
+
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        
+    }
     }
 }

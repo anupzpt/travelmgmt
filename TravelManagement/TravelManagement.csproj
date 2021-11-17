@@ -102,11 +102,11 @@
     <Compile Include="admindelete.Designer.cs">
       <DependentUpon>admindelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminforntpagepanel.cs">
+    <Compile Include="adminforntpage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="adminforntpagepanel.Designer.cs">
-      <DependentUpon>adminforntpagepanel.cs</DependentUpon>
+    <Compile Include="adminforntpage.Designer.cs">
+      <DependentUpon>adminforntpage.cs</DependentUpon>
     </Compile>
     <Compile Include="adminimage.cs">
       <SubType>UserControl</SubType>
@@ -380,8 +380,8 @@
     <EmbeddedResource Include="admindelete.resx">
       <DependentUpon>admindelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adminforntpagepanel.resx">
-      <DependentUpon>adminforntpagepanel.cs</DependentUpon>
+    <EmbeddedResource Include="adminforntpage.resx">
+      <DependentUpon>adminforntpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminimage.resx">
       <DependentUpon>adminimage.cs</DependentUpon>
@@ -686,6 +686,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\right_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_reset_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -121,6 +121,9 @@
   <data name="ahokpillar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ahokpillar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="right_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\right_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +139,8 @@
   <data name="address.icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\address.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skype" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skype.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="darjeeling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\darjeeling.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mardi-Himal-Trek" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mardi-Himal-Trek.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +148,8 @@
   <data name="instagram_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instagram_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="skype" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skype.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,26 +184,26 @@
   <data name="secured_letter_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\secured_letter_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="darjeeling" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\darjeeling.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="upper-mustang-trek" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upper-mustang-trek.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="planning-_a_group_trip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\planning-_a_group_trip.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chevron_left_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chevron_left_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="email1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="chevron_left_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chevron_left_50px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="email1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\email1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="inbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="london" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\london.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +232,8 @@
   <data name="team" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\team.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="file_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\file_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="planning-_a_group_trip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planning-_a_group_trip.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="twitter_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\twitter_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,8 +250,8 @@
   <data name="sacho" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sacho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="file_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chitwan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chitwan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,7 +268,7 @@
   <data name="left_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\left_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="right_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\right_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_reset_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_reset_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

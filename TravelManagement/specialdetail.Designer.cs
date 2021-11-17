@@ -50,6 +50,9 @@
             this.specialbutton3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
+            this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.left = new System.Windows.Forms.Button();
+            this.right = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.bestpanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bestpanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.gunaShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,6 +77,7 @@
             this.panel1.Controls.Add(this.bestpanel4);
             this.panel1.Controls.Add(this.bestpanel2);
             this.panel1.Controls.Add(this.bestpanel3);
+            this.panel1.Controls.Add(this.gunaShadowPanel1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(927, 420);
@@ -83,9 +88,10 @@
             this.detail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.detail.Location = new System.Drawing.Point(-3, 0);
+            this.detail.ForeColor = System.Drawing.Color.Black;
+            this.detail.Location = new System.Drawing.Point(0, 0);
             this.detail.Name = "detail";
-            this.detail.Size = new System.Drawing.Size(927, 420);
+            this.detail.Size = new System.Drawing.Size(931, 435);
             this.detail.TabIndex = 14;
             this.detail.Visible = false;
             this.detail.Load += new System.EventHandler(this.detail_Load);
@@ -299,6 +305,50 @@
             // 
             this.Refreshtimer.Tick += new System.EventHandler(this.Refreshtimer_Tick);
             // 
+            // gunaShadowPanel1
+            // 
+            this.gunaShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel1.Controls.Add(this.left);
+            this.gunaShadowPanel1.Controls.Add(this.right);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(20, 26);
+            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.DarkGreen;
+            this.gunaShadowPanel1.ShadowDepth = 200;
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(886, 369);
+            this.gunaShadowPanel1.TabIndex = 15;
+            // 
+            // left
+            // 
+            this.left.BackColor = System.Drawing.Color.White;
+            this.left.BackgroundImage = global::TravelManagement.Properties.Resources.chevron_left_50px;
+            this.left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.left.FlatAppearance.BorderSize = 0;
+            this.left.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.left.Location = new System.Drawing.Point(5, 148);
+            this.left.Name = "left";
+            this.left.Size = new System.Drawing.Size(51, 49);
+            this.left.TabIndex = 2;
+            this.left.UseVisualStyleBackColor = false;
+            this.left.Click += new System.EventHandler(this.left_Click);
+            // 
+            // right
+            // 
+            this.right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.right.BackColor = System.Drawing.Color.White;
+            this.right.BackgroundImage = global::TravelManagement.Properties.Resources.chevron_right_50px;
+            this.right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.right.FlatAppearance.BorderSize = 0;
+            this.right.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.right.Location = new System.Drawing.Point(813, 148);
+            this.right.Name = "right";
+            this.right.Size = new System.Drawing.Size(51, 49);
+            this.right.TabIndex = 1;
+            this.right.UseVisualStyleBackColor = false;
+            this.right.Click += new System.EventHandler(this.right_Click);
+            // 
             // specialdetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +371,7 @@
             this.bestpanel3.ResumeLayout(false);
             this.bestpanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.gunaShadowPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -348,5 +399,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private Detail detail;
         private System.Windows.Forms.Timer Refreshtimer;
+        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
+        private System.Windows.Forms.Button left;
+        private System.Windows.Forms.Button right;
     }
 }

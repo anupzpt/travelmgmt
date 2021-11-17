@@ -102,6 +102,13 @@ namespace TravelManagement
             if (MyGlobal.displayadminfrontpage == 1)
             {
                 adminforntpage.Visible = true;
+
+                adminreceive.Visible = false;
+                addnewadmin.Visible = false;
+                bookeddataforadmin.Visible = false;
+                changepassword.Visible = false;
+                logout.Visible = false;
+                
                 homepageusercontrol.Visible = false;
                 aboutususercontrol.Visible = false;
                 tourusercontrolform.Visible = false;
@@ -109,13 +116,14 @@ namespace TravelManagement
                 specialusercontrol.Visible = false;
                 contactusercontrol.Visible = false;
 
+                MyGlobal.displayadminfrontpage = 0;
             }
-            if(MyGlobal.displayadminfrontpage==0)
-            {
-                adminforntpage.Visible = false;
-              
-            }
-            if(MyGlobal.displayloginpage==1)
+            //if (MyGlobal.displayadminfrontpage == 0)
+            //{
+            //    adminforntpage.Visible = false;
+
+            //}
+            if (MyGlobal.displayloginpage==1)
             {
                 loggedin.Visible = true;
                 gunaCirclePictureBox2.BringToFront();
@@ -125,7 +133,12 @@ namespace TravelManagement
             if(MyGlobal.adminreceive==1)
             {
                 adminreceive.Visible = true;
+            
                 adminforntpage.Visible = false;
+                addnewadmin.Visible = false;
+                bookeddataforadmin.Visible = false;
+                changepassword.Visible = false;
+                logout.Visible = false;
                 homepageusercontrol.Visible = false;
                 aboutususercontrol.Visible = false;
                 tourusercontrolform.Visible = false;
@@ -138,6 +151,10 @@ namespace TravelManagement
             if(MyGlobal.addadmin==1)
             {
                 addnewadmin.Visible = true;
+
+                bookeddataforadmin.Visible = false;
+                changepassword.Visible = false;
+                logout.Visible = false;
                 adminreceive.Visible = false;
                 adminforntpage.Visible = false;
                 homepageusercontrol.Visible = false;
@@ -147,6 +164,23 @@ namespace TravelManagement
                 specialusercontrol.Visible = false;
                 contactusercontrol.Visible = false;
                 MyGlobal.addadmin = 0;
+            }
+            if(MyGlobal.bookingadmin==1)
+            {
+                bookeddataforadmin.Visible = true;
+
+                changepassword.Visible = false;
+                logout.Visible = false;
+                addnewadmin.Visible = false;
+                adminreceive.Visible = false;
+                adminforntpage.Visible = false;
+                homepageusercontrol.Visible = false;
+                aboutususercontrol.Visible = false;
+                tourusercontrolform.Visible = false;
+                trekkingusercontrol.Visible = false;
+                specialusercontrol.Visible = false;
+                contactusercontrol.Visible = false;
+                MyGlobal.bookingadmin = 0;
             }
             if (MyGlobal.changepassword==1)
             {
@@ -185,8 +219,13 @@ namespace TravelManagement
             if(MyGlobal.userlogout == 1)
             {
                 logout.Visible = true;
+
                 user.Visible = false;
                 changepassword.Visible = false;
+
+                addnewadmin.Visible = false;
+                bookeddataforadmin.Visible = false;
+                adminreceive.Visible = false;
                 adminforntpage.Visible = false;
                 
                 homepageusercontrol.Visible = false;
@@ -202,7 +241,10 @@ namespace TravelManagement
                 logout.Visible = false;
                 user.Visible = false;
                 changepassword.Visible = false;
-                adminforntpage.Visible = false;
+                addnewadmin.Visible = false;
+                bookeddataforadmin.Visible = false;
+                adminreceive.Visible = false;
+                adminforntpage.Visible = false; 
                 homepageusercontrol.Visible = true;
                 aboutususercontrol.Visible = false;
                 tourusercontrolform.Visible = false;
@@ -231,7 +273,7 @@ namespace TravelManagement
 
         private void Home_Click_1(object sender, EventArgs e)
         {
-            adminforntpage.Visible = false;
+           
             homepageusercontrol.Visible = true;
             aboutususercontrol.Visible = false;
             tourusercontrolform.Visible = false;
@@ -242,7 +284,7 @@ namespace TravelManagement
 
         private void Aboutus_Click_1(object sender, EventArgs e)
         {
-            adminforntpage.Visible = false;
+            
 
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = true;
@@ -254,7 +296,7 @@ namespace TravelManagement
 
         private void Tours_Click_1(object sender, EventArgs e)
         {
-            adminforntpage.Visible = false;
+          
 
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = false;
@@ -266,7 +308,7 @@ namespace TravelManagement
 
         private void Trekking_Click_1(object sender, EventArgs e)
         {
-            adminforntpage.Visible = false;
+           
 
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = false;
@@ -278,7 +320,7 @@ namespace TravelManagement
 
         private void Specialbutton_Click_1(object sender, EventArgs e)
         {
-            adminforntpage.Visible = false;
+            
 
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = false;
@@ -290,7 +332,7 @@ namespace TravelManagement
 
         private void Contact_Click_1(object sender, EventArgs e)
         {
-            adminforntpage.Visible = false;
+            
 
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = false;

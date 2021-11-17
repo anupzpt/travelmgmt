@@ -29,7 +29,7 @@ namespace TravelManagement
 
         private void afterloggeduser_Load(object sender, EventArgs e)
         {
-            userlabel.Text = MyGlobal.username;
+            RefreshTimer.Start();
         }
 
         private void logoutbutton_Click(object sender, EventArgs e)
@@ -47,6 +47,15 @@ namespace TravelManagement
         private void passwordbutton_Click(object sender, EventArgs e)
         {
             MyGlobal.changepassword = 1;
+        }
+
+        private void RefreshTimer_Tick(object sender, EventArgs e)
+        {
+            if(MyGlobal.userlogout==2)
+            {
+                userlabel.Text = MyGlobal.username;
+                MyGlobal.userlogout = 0;//fari naya variable create garna naparos vanera 
+            }
         }
     }
 }

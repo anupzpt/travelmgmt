@@ -33,6 +33,7 @@
             this.detailpanel = new System.Windows.Forms.Panel();
             this.detailshadowpanel = new Guna.UI.WinForms.GunaShadowPanel();
             this.cancel = new Guna.UI.WinForms.GunaGradientButton();
+            this.bookedconform = new TravelManagement.bookedconform();
             this.bookpanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.emailvalidation = new System.Windows.Forms.Label();
             this.quantityvalidity = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.bookedconform = new TravelManagement.bookedconform();
+            this.label2 = new System.Windows.Forms.Label();
             this.detailpanel.SuspendLayout();
             this.detailshadowpanel.SuspendLayout();
             this.bookpanel.SuspendLayout();
@@ -147,12 +148,20 @@
             this.cancel.Visible = false;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
+            // bookedconform
+            // 
+            this.bookedconform.Location = new System.Drawing.Point(0, 0);
+            this.bookedconform.Name = "bookedconform";
+            this.bookedconform.Size = new System.Drawing.Size(716, 426);
+            this.bookedconform.TabIndex = 16;
+            // 
             // bookpanel
             // 
             this.bookpanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bookpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bookpanel.BackgroundImage")));
             this.bookpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bookpanel.Controls.Add(this.label2);
             this.bookpanel.Controls.Add(this.emailvalidation);
             this.bookpanel.Controls.Add(this.quantityvalidity);
             this.bookpanel.Controls.Add(this.validlabel);
@@ -699,12 +708,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // bookedconform
+            // label2
             // 
-            this.bookedconform.Location = new System.Drawing.Point(0, 0);
-            this.bookedconform.Name = "bookedconform";
-            this.bookedconform.Size = new System.Drawing.Size(716, 426);
-            this.bookedconform.TabIndex = 16;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(-13, 358);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(249, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "* Please Enter 10 digit Valid Number";
+            this.label2.Visible = false;
             // 
             // Detail
             // 
@@ -778,5 +792,6 @@
         private Guna.UI.WinForms.GunaGradientButton cancel;
         private System.Windows.Forms.Label emailvalidation;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label2;
     }
 }

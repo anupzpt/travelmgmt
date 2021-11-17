@@ -47,6 +47,7 @@
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.adminforntpage = new TravelManagement.adminforntpage();
             this.afterloggeduser = new TravelManagement.afterloggeduser();
             this.afterloggedadmin = new TravelManagement.afterloggedadmin();
             this.loggedin = new TravelManagement.loggedin();
@@ -58,11 +59,11 @@
             this.specialusercontrol = new TravelManagement.Specialusercontrol();
             this.contactusercontrol = new TravelManagement.contactusercontrol();
             this.aboutususercontrol = new TravelManagement.aboutususercontrol();
-            this.adminforntpage = new TravelManagement.adminforntpage();
             this.user = new TravelManagement.user();
             this.changepassword = new TravelManagement.changepassword();
             this.logout = new TravelManagement.logout();
             this.receiveuser = new TravelManagement.receiveuser();
+            this.bookeddataforadmin = new TravelManagement.bookeddataforadmin();
             this.refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -325,23 +326,35 @@
             this.panel3.Controls.Add(this.afterloggeduser);
             this.panel3.Controls.Add(this.afterloggedadmin);
             this.panel3.Controls.Add(this.loggedin);
-            this.panel3.Controls.Add(this.addnewadmin);
-            this.panel3.Controls.Add(this.adminreceive);
             this.panel3.Controls.Add(this.homepageusercontrol);
             this.panel3.Controls.Add(this.trekkingusercontrol);
             this.panel3.Controls.Add(this.tourusercontrolform);
             this.panel3.Controls.Add(this.specialusercontrol);
             this.panel3.Controls.Add(this.contactusercontrol);
             this.panel3.Controls.Add(this.aboutususercontrol);
-            this.panel3.Controls.Add(this.adminforntpage);
             this.panel3.Controls.Add(this.user);
             this.panel3.Controls.Add(this.changepassword);
             this.panel3.Controls.Add(this.logout);
             this.panel3.Controls.Add(this.receiveuser);
+            this.panel3.Controls.Add(this.bookeddataforadmin);
+            this.panel3.Controls.Add(this.adminforntpage);
+            this.panel3.Controls.Add(this.adminreceive);
+            this.panel3.Controls.Add(this.addnewadmin);
             this.panel3.Location = new System.Drawing.Point(0, 145);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(840, 299);
             this.panel3.TabIndex = 2;
+            // 
+            // adminforntpage
+            // 
+            this.adminforntpage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminforntpage.Location = new System.Drawing.Point(0, 0);
+            this.adminforntpage.Name = "adminforntpage";
+            this.adminforntpage.Size = new System.Drawing.Size(900, 471);
+            this.adminforntpage.TabIndex = 19;
+            this.adminforntpage.Visible = false;
             // 
             // afterloggeduser
             // 
@@ -371,9 +384,11 @@
             // 
             // addnewadmin
             // 
+            this.addnewadmin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.addnewadmin.Location = new System.Drawing.Point(0, 0);
             this.addnewadmin.Name = "addnewadmin";
-            this.addnewadmin.Size = new System.Drawing.Size(396, 396);
+            this.addnewadmin.Size = new System.Drawing.Size(839, 500);
             this.addnewadmin.TabIndex = 13;
             this.addnewadmin.Visible = false;
             // 
@@ -461,17 +476,6 @@
             this.aboutususercontrol.TabIndex = 1;
             this.aboutususercontrol.Visible = false;
             // 
-            // adminforntpage
-            // 
-            this.adminforntpage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminforntpage.Location = new System.Drawing.Point(0, 0);
-            this.adminforntpage.Name = "adminforntpage";
-            this.adminforntpage.Size = new System.Drawing.Size(823, 506);
-            this.adminforntpage.TabIndex = 6;
-            this.adminforntpage.Visible = false;
-            // 
             // user
             // 
             this.user.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -514,6 +518,16 @@
             this.receiveuser.TabIndex = 17;
             this.receiveuser.Visible = false;
             // 
+            // bookeddataforadmin
+            // 
+            this.bookeddataforadmin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookeddataforadmin.Location = new System.Drawing.Point(0, 0);
+            this.bookeddataforadmin.Name = "bookeddataforadmin";
+            this.bookeddataforadmin.Size = new System.Drawing.Size(837, 471);
+            this.bookeddataforadmin.TabIndex = 18;
+            this.bookeddataforadmin.Visible = false;
+            // 
             // refreshtimer
             // 
             this.refreshtimer.Tick += new System.EventHandler(this.refreshtimer_Tick);
@@ -549,7 +563,6 @@
         private System.Windows.Forms.Panel panel3;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
         private System.Windows.Forms.Timer refreshtimer;
-        private adminforntpage adminforntpage;
         private trekkingusercontrol trekkingusercontrol;
         private tourusercontrolform tourusercontrolform;
         private Specialusercontrol specialusercontrol;
@@ -577,6 +590,8 @@
         private logout logout;
         private user user;
         private receiveuser receiveuser;
+        private bookeddataforadmin bookeddataforadmin;
+        private adminforntpage adminforntpage;
     }
 }
 
