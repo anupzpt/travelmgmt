@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBD6F974-702B-4DE4-83F8-C9FF567B0D77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TravelManagement</RootNamespace>
+    <AssemblyName>TravelManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Project\TravelManagement\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\Project\TravelManagement\bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aboutus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aboutus.Designer.cs">
+      <DependentUpon>Aboutus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aboutusdetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="aboutusdetail.Designer.cs">
+      <DependentUpon>aboutusdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aboutususercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="aboutususercontrol.Designer.cs">
+      <DependentUpon>aboutususercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addimage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addimage.Designer.cs">
+      <DependentUpon>addimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addnewadmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addnewadmin.Designer.cs">
+      <DependentUpon>addnewadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminadd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminadd.Designer.cs">
+      <DependentUpon>adminadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admindelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admindelete.Designer.cs">
+      <DependentUpon>admindelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminforntpagepanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminforntpagepanel.Designer.cs">
+      <DependentUpon>adminforntpagepanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminimage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminimage.Designer.cs">
+      <DependentUpon>adminimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminmessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminmessage.Designer.cs">
+      <DependentUpon>adminmessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminreceive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminreceive.Designer.cs">
+      <DependentUpon>adminreceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminupdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminupdate.Designer.cs">
+      <DependentUpon>adminupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="afterloggedadmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="afterloggedadmin.Designer.cs">
+      <DependentUpon>afterloggedadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="afterloggeduser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="afterloggeduser.Designer.cs">
+      <DependentUpon>afterloggeduser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookedconform.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bookedconform.Designer.cs">
+      <DependentUpon>bookedconform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookeddataforadmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bookeddataforadmin.Designer.cs">
+      <DependentUpon>bookeddataforadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookeduser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bookeduser.Designer.cs">
+      <DependentUpon>bookeduser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changepassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="changepassword.Designer.cs">
+      <DependentUpon>changepassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contactus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contactus.Designer.cs">
+      <DependentUpon>Contactus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contactusdetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contactusdetail.Designer.cs">
+      <DependentUpon>Contactusdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="contactusercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="contactusercontrol.Designer.cs">
+      <DependentUpon>contactusercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteimage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="deleteimage.Designer.cs">
+      <DependentUpon>deleteimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteusers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="deleteusers.Designer.cs">
+      <DependentUpon>deleteusers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Detail.Designer.cs">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="explorenepal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="explorenepal.Designer.cs">
+      <DependentUpon>explorenepal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hiking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="hiking.Designer.cs">
+      <DependentUpon>hiking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homepage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homepage.Designer.cs">
+      <DependentUpon>homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepageusercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Homepageusercontrol.Designer.cs">
+      <DependentUpon>Homepageusercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lastpanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lastpanel.Designer.cs">
+      <DependentUpon>lastpanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loggedin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loggedin.Designer.cs">
+      <DependentUpon>loggedin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="logout.Designer.cs">
+      <DependentUpon>logout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mandaladesign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mandaladesign.Designer.cs">
+      <DependentUpon>mandaladesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyGlobal.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="search.Designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="receiveuser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="receiveuser.Designer.cs">
+      <DependentUpon>receiveuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="special.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="special.Designer.cs">
+      <DependentUpon>special.cs</DependentUpon>
+    </Compile>
+    <Compile Include="specialdetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="specialdetail.Designer.cs">
+      <DependentUpon>specialdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Specialusercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Specialusercontrol.Designer.cs">
+      <DependentUpon>Specialusercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tour.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tour.Designer.cs">
+      <DependentUpon>tour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tourinnepal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tourinnepal.Designer.cs">
+      <DependentUpon>tourinnepal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tourusercontrolform.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tourusercontrolform.Designer.cs">
+      <DependentUpon>tourusercontrolform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="travelmanagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>travelmanagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="treaking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="treaking.Designer.cs">
+      <DependentUpon>treaking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="treakinginnepal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="treakinginnepal.Designer.cs">
+      <DependentUpon>treakinginnepal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trekkingusercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trekkingusercontrol.Designer.cs">
+      <DependentUpon>trekkingusercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateuser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="updateuser.Designer.cs">
+      <DependentUpon>updateuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usermainpanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usermainpanel.Designer.cs">
+      <DependentUpon>Usermainpanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aboutus.resx">
+      <DependentUpon>Aboutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aboutusdetail.resx">
+      <DependentUpon>aboutusdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aboutususercontrol.resx">
+      <DependentUpon>aboutususercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addimage.resx">
+      <DependentUpon>addimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addnewadmin.resx">
+      <DependentUpon>addnewadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminadd.resx">
+      <DependentUpon>adminadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admindelete.resx">
+      <DependentUpon>admindelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminforntpagepanel.resx">
+      <DependentUpon>adminforntpagepanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminimage.resx">
+      <DependentUpon>adminimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminmessage.resx">
+      <DependentUpon>adminmessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminreceive.resx">
+      <DependentUpon>adminreceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminupdate.resx">
+      <DependentUpon>adminupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="afterloggedadmin.resx">
+      <DependentUpon>afterloggedadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="afterloggeduser.resx">
+      <DependentUpon>afterloggeduser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookedconform.resx">
+      <DependentUpon>bookedconform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookeddataforadmin.resx">
+      <DependentUpon>bookeddataforadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookeduser.resx">
+      <DependentUpon>bookeduser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassword.resx">
+      <DependentUpon>changepassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contactus.resx">
+      <DependentUpon>Contactus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contactusdetail.resx">
+      <DependentUpon>Contactusdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contactusercontrol.resx">
+      <DependentUpon>contactusercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteimage.resx">
+      <DependentUpon>deleteimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteusers.resx">
+      <DependentUpon>deleteusers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail.resx">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="explorenepal.resx">
+      <DependentUpon>explorenepal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hiking.resx">
+      <DependentUpon>hiking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homepage.resx">
+      <DependentUpon>homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepageusercontrol.resx">
+      <DependentUpon>Homepageusercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lastpanel.resx">
+      <DependentUpon>lastpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loggedin.resx">
+      <DependentUpon>loggedin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logout.resx">
+      <DependentUpon>logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mandaladesign.resx">
+      <DependentUpon>mandaladesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search.resx">
+      <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receiveuser.resx">
+      <DependentUpon>receiveuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="special.resx">
+      <DependentUpon>special.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="specialdetail.resx">
+      <DependentUpon>specialdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Specialusercontrol.resx">
+      <DependentUpon>Specialusercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tour.resx">
+      <DependentUpon>tour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tourinnepal.resx">
+      <DependentUpon>tourinnepal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tourusercontrolform.resx">
+      <DependentUpon>tourusercontrolform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="treaking.resx">
+      <DependentUpon>treaking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="treakinginnepal.resx">
+      <DependentUpon>treakinginnepal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trekkingusercontrol.resx">
+      <DependentUpon>trekkingusercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateuser.resx">
+      <DependentUpon>updateuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usermainpanel.resx">
+      <DependentUpon>Usermainpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="travelmanagementDataSet.xsc">
+      <DependentUpon>travelmanagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="travelmanagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>travelmanagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="travelmanagementDataSet.xss">
+      <DependentUpon>travelmanagementDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\landlide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balaji-srinivasan-Q-MPJF7MbAI-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\planning-_a_group_trip.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cell_phone_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secured_letter_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darjeeling.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upper-mustang-trek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maldives.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hompageimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chitwan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ahokpillar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mardi-Himal-Trek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\london.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_right_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_left_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sacho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addadminagain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addadminagain1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_left_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_52px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
