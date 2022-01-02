@@ -188,6 +188,8 @@ namespace TravelManagement
                 user.Visible = false;
                 logout.Visible = false;
                 addnewadmin.Visible = false;
+                receiveuser.Visible = false;
+
                 adminreceive.Visible = false;
                 adminforntpage.Visible = false;
                 homepageusercontrol.Visible = false;
@@ -206,6 +208,8 @@ namespace TravelManagement
                 logout.Visible = false;
                 changepassword.Visible = false;
                 adminforntpage.Visible = false;
+                receiveuser.Visible = false;
+
                 homepageusercontrol.Visible = false;
                 aboutususercontrol.Visible = false;
                 tourusercontrolform.Visible = false;
@@ -222,7 +226,7 @@ namespace TravelManagement
 
                 user.Visible = false;
                 changepassword.Visible = false;
-
+                receiveuser.Visible = false;
                 addnewadmin.Visible = false;
                 bookeddataforadmin.Visible = false;
                 adminreceive.Visible = false;
@@ -296,8 +300,7 @@ namespace TravelManagement
 
         private void Tours_Click_1(object sender, EventArgs e)
         {
-          
-
+            MyGlobal.globalcross = 1;
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = false;
             tourusercontrolform.Visible = true;
@@ -308,8 +311,7 @@ namespace TravelManagement
 
         private void Trekking_Click_1(object sender, EventArgs e)
         {
-           
-
+            MyGlobal.globalcross = 1;
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = false;
             tourusercontrolform.Visible = false;
@@ -320,8 +322,7 @@ namespace TravelManagement
 
         private void Specialbutton_Click_1(object sender, EventArgs e)
         {
-            
-
+            MyGlobal.globalcross = 1;
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = false;
             tourusercontrolform.Visible = false;
@@ -332,8 +333,6 @@ namespace TravelManagement
 
         private void Contact_Click_1(object sender, EventArgs e)
         {
-            
-
             homepageusercontrol.Visible = false;
             aboutususercontrol.Visible = false;
             tourusercontrolform.Visible = false;

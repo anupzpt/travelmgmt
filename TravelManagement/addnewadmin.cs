@@ -30,6 +30,8 @@ namespace TravelManagement
                 sda.SelectCommand.ExecuteNonQuery();
                 MyGlobal.logintimer = 1;
                 MessageBox.Show("ADDED SUCCESSFULLY");
+                usernametext.Text = "USERNAME";
+                password.Text = null;
 
             }
             catch (Exception)

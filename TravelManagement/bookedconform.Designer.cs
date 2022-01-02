@@ -125,7 +125,7 @@
             this.datelabel.AutoSize = true;
             this.datelabel.BackColor = System.Drawing.Color.Transparent;
             this.datelabel.Font = new System.Drawing.Font("Playfair Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datelabel.Location = new System.Drawing.Point(434, 3);
+            this.datelabel.Location = new System.Drawing.Point(407, 3);
             this.datelabel.Name = "datelabel";
             this.datelabel.Size = new System.Drawing.Size(68, 26);
             this.datelabel.TabIndex = 27;
@@ -303,7 +303,7 @@
             this.date.AutoSize = true;
             this.date.BackColor = System.Drawing.Color.Transparent;
             this.date.Font = new System.Drawing.Font("Playfair Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(333, 3);
+            this.date.Location = new System.Drawing.Point(322, 3);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(83, 26);
             this.date.TabIndex = 11;

@@ -30,7 +30,7 @@ namespace TravelManagement
                 sda.SelectCommand.ExecuteNonQuery();
                 MyGlobal.logintimer = 1;
                 MessageBox.Show("REGISTERED SUCCESSFULLY");
-
+                usernametext.Text = null;
             }
             catch (Exception)
             {
@@ -105,6 +105,28 @@ namespace TravelManagement
         private void usernametext_MouseDown_1(object sender, MouseEventArgs e)
         {
             usernametext.Text = null;
+        }
+
+        private void usernametext_Enter(object sender, EventArgs e)
+        {
+            usernametext.Text = null;
+
+        }
+
+        private void emailtextbox_Enter(object sender, EventArgs e)
+        {
+            emailtextbox.Text = null;
+
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            password.Text = null;
+        }
+
+        private void rewrite_Enter(object sender, EventArgs e)
+        {
+            rewrite.Text = null;
         }
     }
 }

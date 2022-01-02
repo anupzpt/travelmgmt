@@ -34,23 +34,23 @@ namespace TravelManagement
             try
             {
                 con.Open();
-                string query = "insert into booking (name,number,email,date,quantity,location,duration,transport,accomodation,tripprice,totalprice,username,ticketno) Values" +
+                string query = "insert into booking (name,number,email,date,quantity,location,duration,transport,accomodation,tripprice,totalprice,username,ticketno,picture) Values" +
                     " ('" + MyGlobal.name+ "','" + MyGlobal.number + "','" + MyGlobal.email + "','" + MyGlobal.date + "'," +
                     "'" + MyGlobal.quantity + "','" + MyGlobal.location + "','" + MyGlobal.duration + "','" + MyGlobal.transport + "','" + MyGlobal.accomodation + "'," +
-                    "'" + MyGlobal.tripprice + "','" + 000 + "','" + MyGlobal.username + "','" + ran + "')";
+                    "'" + MyGlobal.tripprice + "','" + MyGlobal.totalprice + "','" + MyGlobal.username + "','" + ran + "','"+MyGlobal.image + "')";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 sda.SelectCommand.ExecuteNonQuery();
                 MessageBox.Show("YOUR BOOKING IS CONFIRMED");
-                datelabel.Text = null;
-                ticketlabel.Text = null;
-                destinationlabel.Text = null;
-                namelabel.Text = null;
-                phonenolabel.Text = null;
-                emaillabel.Text = null;
-                quantitylabel.Text = null;
-                durationlabel.Text = null;
-                transportlabel.Text = null;
-                trippricelabel.Text = null;
+                //datelabel.Text = null;
+                //ticketlabel.Text = null;
+                //destinationlabel.Text = null;
+                //namelabel.Text = null;
+                //phonenolabel.Text = null;
+                //emaillabel.Text = null;
+                //quantitylabel.Text = null;
+                //durationlabel.Text = null;
+                //transportlabel.Text = null;
+                //trippricelabel.Text = null;
             }
             catch (Exception)
             {
@@ -79,6 +79,7 @@ namespace TravelManagement
                 durationlabel.Text = MyGlobal.duration;
                 transportlabel.Text = MyGlobal.transport;
                 trippricelabel.Text = MyGlobal.tripprice;
+                totallabel.Text = MyGlobal.totalprice;  
                 Random r = new Random();
                 ran = r.Next(3000, 9000);
                 ticketlabel.Text = ran.ToString();

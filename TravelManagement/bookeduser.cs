@@ -52,7 +52,7 @@ namespace TravelManagement
                             imagepicturebox.Text = dt.Rows[i]["picture"].ToString();
                             imagepicturebox.Image = Image.FromFile(imagepicturebox.Text);
                             MyGlobal.ticketbook = 0;
-                            MessageBox.Show(i.ToString());
+                         //   MessageBox.Show(i.ToString());
 
                         }
                     }
@@ -73,10 +73,6 @@ namespace TravelManagement
 
                 }
             }
-        
-            
-
-
         }
        
         private void right_Click(object sender, EventArgs e)

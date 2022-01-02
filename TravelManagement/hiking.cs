@@ -192,10 +192,15 @@ namespace TravelManagement
 
         private void Refreshtimer_Tick(object sender, EventArgs e)
         {
-            if (MyGlobal.closedetail == 1)
+            //if (MyGlobal.closedetail == 1)
+            //{
+            //    detail.Visible = false;
+            //    MyGlobal.closedetail = 0;
+            //}
+            if (MyGlobal.crossbuttonclick == 1)
             {
+                MyGlobal.crossbuttonclick = 0;
                 detail.Visible = false;
-                MyGlobal.closedetail = 0;
             }
         }
 

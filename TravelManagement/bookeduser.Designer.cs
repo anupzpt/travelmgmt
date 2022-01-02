@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.booking = new Guna.UI.WinForms.GunaShadowPanel();
+            this.right = new System.Windows.Forms.Button();
+            this.left = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ticketno = new System.Windows.Forms.Label();
             this.ticket = new System.Windows.Forms.Label();
@@ -37,6 +39,7 @@
             this.totalpricetextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.days = new Guna.UI.WinForms.GunaLabel();
+            this.imagepicturebox = new Guna.UI.WinForms.GunaPictureBox();
             this.transporttextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.destinationtextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.trippricetextbox = new Guna.UI.WinForms.GunaLineTextBox();
@@ -52,9 +55,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.addpackagetext = new System.Windows.Forms.Label();
             this.timerbook = new System.Windows.Forms.Timer(this.components);
-            this.right = new System.Windows.Forms.Button();
-            this.left = new System.Windows.Forms.Button();
-            this.imagepicturebox = new Guna.UI.WinForms.GunaPictureBox();
             this.booking.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagepicturebox)).BeginInit();
@@ -75,6 +75,37 @@
             this.booking.ShadowColor = System.Drawing.Color.Black;
             this.booking.Size = new System.Drawing.Size(852, 402);
             this.booking.TabIndex = 0;
+            // 
+            // right
+            // 
+            this.right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.right.BackColor = System.Drawing.Color.Transparent;
+            this.right.BackgroundImage = global::TravelManagement.Properties.Resources.right_52px;
+            this.right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.right.FlatAppearance.BorderSize = 0;
+            this.right.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.right.ForeColor = System.Drawing.Color.Firebrick;
+            this.right.Location = new System.Drawing.Point(799, 0);
+            this.right.Name = "right";
+            this.right.Size = new System.Drawing.Size(53, 44);
+            this.right.TabIndex = 21;
+            this.right.UseVisualStyleBackColor = false;
+            this.right.Click += new System.EventHandler(this.right_Click);
+            // 
+            // left
+            // 
+            this.left.BackColor = System.Drawing.Color.Transparent;
+            this.left.BackgroundImage = global::TravelManagement.Properties.Resources.left_52px;
+            this.left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.left.FlatAppearance.BorderSize = 0;
+            this.left.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.left.ForeColor = System.Drawing.Color.Firebrick;
+            this.left.Location = new System.Drawing.Point(0, 0);
+            this.left.Name = "left";
+            this.left.Size = new System.Drawing.Size(53, 44);
+            this.left.TabIndex = 20;
+            this.left.UseVisualStyleBackColor = false;
+            this.left.Click += new System.EventHandler(this.left_Click);
             // 
             // panel1
             // 
@@ -175,6 +206,19 @@
             this.days.Size = new System.Drawing.Size(62, 26);
             this.days.TabIndex = 24;
             this.days.Text = "DAYS";
+            // 
+            // imagepicturebox
+            // 
+            this.imagepicturebox.BackColor = System.Drawing.Color.Transparent;
+            this.imagepicturebox.BaseColor = System.Drawing.Color.Transparent;
+            this.imagepicturebox.Enabled = false;
+            this.imagepicturebox.ErrorImage = null;
+            this.imagepicturebox.Location = new System.Drawing.Point(550, 41);
+            this.imagepicturebox.Name = "imagepicturebox";
+            this.imagepicturebox.Size = new System.Drawing.Size(232, 188);
+            this.imagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagepicturebox.TabIndex = 22;
+            this.imagepicturebox.TabStop = false;
             // 
             // transporttextbox
             // 
@@ -349,51 +393,6 @@
             // timerbook
             // 
             this.timerbook.Tick += new System.EventHandler(this.timerbook_Tick);
-            // 
-            // right
-            // 
-            this.right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.right.BackColor = System.Drawing.Color.Transparent;
-            this.right.BackgroundImage = global::TravelManagement.Properties.Resources.right_52px;
-            this.right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.right.FlatAppearance.BorderSize = 0;
-            this.right.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.right.ForeColor = System.Drawing.Color.Firebrick;
-            this.right.Location = new System.Drawing.Point(799, 0);
-            this.right.Name = "right";
-            this.right.Size = new System.Drawing.Size(53, 44);
-            this.right.TabIndex = 21;
-            this.right.UseVisualStyleBackColor = false;
-            this.right.Click += new System.EventHandler(this.right_Click);
-            // 
-            // left
-            // 
-            this.left.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.left.BackColor = System.Drawing.Color.Transparent;
-            this.left.BackgroundImage = global::TravelManagement.Properties.Resources.left_52px;
-            this.left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.left.FlatAppearance.BorderSize = 0;
-            this.left.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.left.ForeColor = System.Drawing.Color.Firebrick;
-            this.left.Location = new System.Drawing.Point(0, 0);
-            this.left.Name = "left";
-            this.left.Size = new System.Drawing.Size(53, 44);
-            this.left.TabIndex = 20;
-            this.left.UseVisualStyleBackColor = false;
-            this.left.Click += new System.EventHandler(this.left_Click);
-            // 
-            // imagepicturebox
-            // 
-            this.imagepicturebox.BackColor = System.Drawing.Color.Transparent;
-            this.imagepicturebox.BaseColor = System.Drawing.Color.Transparent;
-            this.imagepicturebox.Enabled = false;
-            this.imagepicturebox.ErrorImage = null;
-            this.imagepicturebox.Location = new System.Drawing.Point(550, 41);
-            this.imagepicturebox.Name = "imagepicturebox";
-            this.imagepicturebox.Size = new System.Drawing.Size(232, 188);
-            this.imagepicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagepicturebox.TabIndex = 22;
-            this.imagepicturebox.TabStop = false;
             // 
             // bookeduser
             // 

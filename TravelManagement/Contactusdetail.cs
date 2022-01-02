@@ -33,9 +33,10 @@ namespace TravelManagement
            
                 try
                 {
+                string date = DateTime.Now.ToString();
                 string reciver = "anu";
                     con.Open();
-                    string query = "insert into message (title,message,sender,reciver,email) Values ('" + titletext.Text + "','" + messagetext.Text + "','" + nametext.Text + "','"+reciver +"','" + emailtext.Text + "')";
+                    string query = "insert into message (title,message,sender,reciver,email,date) Values ('" + titletext.Text + "','" + messagetext.Text + "','" + nametext.Text + "','"+reciver +"','" + emailtext.Text + "','"+date+"')";
                     SqlDataAdapter sda = new SqlDataAdapter(query, con);
                     sda.SelectCommand.ExecuteNonQuery();
                     MessageBox.Show("SEND");

@@ -202,6 +202,18 @@ namespace TravelManagement
                 }
                 MyGlobal.deletebutton = 0;
             }
+            if (MyGlobal.adminpanneldataremove == 1)
+            {
+                destinationtextbox.Text = null;
+                trippricetextbox.Text = null;
+                descriptiontextbox.Text = null;
+                Durationtextbox.Text = null;
+                transporttextbox.Text = null;
+                accomodationtextbox.Text = null;
+                imagetextbox.Text = null;
+                imagepicturebox.Image = null;
+                MyGlobal.adminpanneldataremove = 0;
+            }
 
         }
 
@@ -217,6 +229,8 @@ namespace TravelManagement
                 transporttextbox.Text = null;
                 accomodationtextbox.Text = null;
                 imagetextbox.Text = null;
+                MyGlobal.adminpanneldataremove = 0;
+
                 MyGlobal.deletetimer = 0;
             }
         }

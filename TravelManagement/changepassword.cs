@@ -73,7 +73,7 @@ namespace TravelManagement
         private void savebutton_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(MyGlobal.constring);
-            if(usernametext.Text=="" ||password.Text=="")
+            if(usernametext.Text=="" |password.Text=="")
             {
                 savebutton.Enabled = false;
                 MessageBox.Show("Enter Username and Password.");
@@ -82,21 +82,16 @@ namespace TravelManagement
             {
                 savebutton.Enabled = true;
             }
-            try
-            {
+            
                 con.Open();
                 string query = "Update login set Password ='" + newpassword.Text + "'where Password= '" + password.Text + " '" ;
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 sda.SelectCommand.ExecuteNonQuery();
                 MessageBox.Show("YOUR PASSWORD IS SUCCESSFULLY CHANGED...");
-                usernametext.Text = null;
+                usernametext.Text = "USERNAME";
                 password.Text = null;
-                newpassword.Text = null;
-            }
-            catch (Exception)
-            {
-
-            }
+                newpassword.Text = "NEW PASSWORD";
+           
         }
 
         private void password_TextChanged(object sender, EventArgs e)

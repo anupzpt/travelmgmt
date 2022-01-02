@@ -144,6 +144,11 @@ namespace TravelManagement
 
         private void Refreshtimer_Tick(object sender, EventArgs e)
         {
+            if (MyGlobal.globalcross == 1)
+            {
+                MyGlobal.globalcross = 0;
+                detail.Visible = false;
+            }
             if (MyGlobal.closedetail == 1)
             {
                 detail.Visible = false;

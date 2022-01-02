@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(afterloggedadmin));
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.adminlabel = new System.Windows.Forms.Label();
+            this.refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.modifydetailbutton = new Guna.UI.WinForms.GunaButton();
             this.addadmin = new Guna.UI.WinForms.GunaButton();
-            this.adminlabel = new System.Windows.Forms.Label();
             this.logoutbutton = new Guna.UI.WinForms.GunaButton();
             this.passwordbutton = new Guna.UI.WinForms.GunaButton();
             this.emailbutton = new Guna.UI.WinForms.GunaButton();
             this.bookeddatabutton = new Guna.UI.WinForms.GunaButton();
-            this.refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.gunaShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +58,20 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(291, 333);
             this.gunaShadowPanel1.TabIndex = 0;
             // 
+            // adminlabel
+            // 
+            this.adminlabel.AutoSize = true;
+            this.adminlabel.Font = new System.Drawing.Font("Playfair Display", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminlabel.Location = new System.Drawing.Point(84, 16);
+            this.adminlabel.Name = "adminlabel";
+            this.adminlabel.Size = new System.Drawing.Size(98, 32);
+            this.adminlabel.TabIndex = 10;
+            this.adminlabel.Text = "ADMIN";
+            // 
+            // refreshtimer
+            // 
+            this.refreshtimer.Tick += new System.EventHandler(this.refreshtimer_Tick);
+            // 
             // modifydetailbutton
             // 
             this.modifydetailbutton.AnimationHoverSpeed = 0.07F;
@@ -70,7 +83,7 @@
             this.modifydetailbutton.FocusedColor = System.Drawing.Color.Empty;
             this.modifydetailbutton.Font = new System.Drawing.Font("Playfair Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifydetailbutton.ForeColor = System.Drawing.Color.White;
-            this.modifydetailbutton.Image = ((System.Drawing.Image)(resources.GetObject("modifydetailbutton.Image")));
+            this.modifydetailbutton.Image = global::TravelManagement.Properties.Resources.edit_property_60px;
             this.modifydetailbutton.ImageSize = new System.Drawing.Size(20, 20);
             this.modifydetailbutton.Location = new System.Drawing.Point(30, 56);
             this.modifydetailbutton.Name = "modifydetailbutton";
@@ -97,7 +110,7 @@
             this.addadmin.FocusedColor = System.Drawing.Color.Empty;
             this.addadmin.Font = new System.Drawing.Font("Playfair Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addadmin.ForeColor = System.Drawing.Color.White;
-            this.addadmin.Image = ((System.Drawing.Image)(resources.GetObject("addadmin.Image")));
+            this.addadmin.Image = global::TravelManagement.Properties.Resources.addadmin;
             this.addadmin.ImageSize = new System.Drawing.Size(20, 20);
             this.addadmin.Location = new System.Drawing.Point(30, 101);
             this.addadmin.Name = "addadmin";
@@ -113,16 +126,6 @@
             this.addadmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.addadmin.Click += new System.EventHandler(this.addadmin_Click);
             // 
-            // adminlabel
-            // 
-            this.adminlabel.AutoSize = true;
-            this.adminlabel.Font = new System.Drawing.Font("Playfair Display", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminlabel.Location = new System.Drawing.Point(84, 16);
-            this.adminlabel.Name = "adminlabel";
-            this.adminlabel.Size = new System.Drawing.Size(98, 32);
-            this.adminlabel.TabIndex = 10;
-            this.adminlabel.Text = "ADMIN";
-            // 
             // logoutbutton
             // 
             this.logoutbutton.AnimationHoverSpeed = 0.07F;
@@ -134,7 +137,7 @@
             this.logoutbutton.FocusedColor = System.Drawing.Color.Empty;
             this.logoutbutton.Font = new System.Drawing.Font("Playfair Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutbutton.ForeColor = System.Drawing.Color.White;
-            this.logoutbutton.Image = ((System.Drawing.Image)(resources.GetObject("logoutbutton.Image")));
+            this.logoutbutton.Image = global::TravelManagement.Properties.Resources.logout1;
             this.logoutbutton.ImageSize = new System.Drawing.Size(20, 20);
             this.logoutbutton.Location = new System.Drawing.Point(30, 275);
             this.logoutbutton.Name = "logoutbutton";
@@ -161,7 +164,7 @@
             this.passwordbutton.FocusedColor = System.Drawing.Color.Empty;
             this.passwordbutton.Font = new System.Drawing.Font("Playfair Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordbutton.ForeColor = System.Drawing.Color.White;
-            this.passwordbutton.Image = ((System.Drawing.Image)(resources.GetObject("passwordbutton.Image")));
+            this.passwordbutton.Image = global::TravelManagement.Properties.Resources.key1;
             this.passwordbutton.ImageSize = new System.Drawing.Size(20, 20);
             this.passwordbutton.Location = new System.Drawing.Point(30, 230);
             this.passwordbutton.Name = "passwordbutton";
@@ -188,7 +191,7 @@
             this.emailbutton.FocusedColor = System.Drawing.Color.Empty;
             this.emailbutton.Font = new System.Drawing.Font("Playfair Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailbutton.ForeColor = System.Drawing.Color.White;
-            this.emailbutton.Image = ((System.Drawing.Image)(resources.GetObject("emailbutton.Image")));
+            this.emailbutton.Image = global::TravelManagement.Properties.Resources.send_email_100px1;
             this.emailbutton.ImageSize = new System.Drawing.Size(20, 20);
             this.emailbutton.Location = new System.Drawing.Point(30, 185);
             this.emailbutton.Name = "emailbutton";
@@ -215,7 +218,7 @@
             this.bookeddatabutton.FocusedColor = System.Drawing.Color.Empty;
             this.bookeddatabutton.Font = new System.Drawing.Font("Playfair Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookeddatabutton.ForeColor = System.Drawing.Color.White;
-            this.bookeddatabutton.Image = ((System.Drawing.Image)(resources.GetObject("bookeddatabutton.Image")));
+            this.bookeddatabutton.Image = global::TravelManagement.Properties.Resources.booked;
             this.bookeddatabutton.ImageSize = new System.Drawing.Size(20, 20);
             this.bookeddatabutton.Location = new System.Drawing.Point(30, 143);
             this.bookeddatabutton.Name = "bookeddatabutton";
@@ -230,10 +233,6 @@
             this.bookeddatabutton.Text = "BOOKED DATA";
             this.bookeddatabutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.bookeddatabutton.Click += new System.EventHandler(this.bookeddatabutton_Click);
-            // 
-            // refreshtimer
-            // 
-            this.refreshtimer.Tick += new System.EventHandler(this.refreshtimer_Tick);
             // 
             // afterloggedadmin
             // 

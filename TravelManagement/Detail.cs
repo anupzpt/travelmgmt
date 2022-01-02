@@ -23,6 +23,7 @@ namespace TravelManagement
         string transport1;
         string accomodation1;
         string tripprice1;
+        string image;
         private void Detail_Load(object sender, EventArgs e)
         {
             panel1.Location = new Point(45, 20);
@@ -51,11 +52,13 @@ namespace TravelManagement
                     accomodation1 = dt.Rows[0]["accomodation"].ToString();
                     transport1 = dt.Rows[0]["transport"].ToString();
                     location = dt.Rows[0]["treklocation"].ToString();
+                    image = dt.Rows[0]["trekpicture"].ToString();
                     detailtext.Text = description;
                     durationlabel.Text = duration1;
                     trippricelabel.Text = tripprice1;
                     accomodationlabel.Text = accomodation1;
                     transportlabel.Text = transport1;
+                    
                 }
                 catch (Exception ex)
                 {
@@ -81,6 +84,8 @@ namespace TravelManagement
                     accomodation1 = dt.Rows[0]["Accomodation"].ToString();
                     transport1 = dt.Rows[0]["Transport"].ToString();
                     location = dt.Rows[0]["Location"].ToString();
+                    image = dt.Rows[0]["Picture"].ToString();
+
                     detailtext.Text = description;
                     durationlabel.Text = duration1;
                     trippricelabel.Text = tripprice1;
@@ -112,6 +117,8 @@ namespace TravelManagement
                     accomodation1 = dt.Rows[0]["accomodation"].ToString();
                     transport1 = dt.Rows[0]["transport"].ToString();
                     location = dt.Rows[0]["speciallocation"].ToString();
+                    image = dt.Rows[0]["specialpicture"].ToString();
+
                     detailtext.Text = description;
                     durationlabel.Text = duration1;
                     trippricelabel.Text = tripprice1;
@@ -142,6 +149,7 @@ namespace TravelManagement
                     accomodation1 = dt.Rows[0]["accomodation"].ToString();
                     transport1 = dt.Rows[0]["transport"].ToString();
                     location = dt.Rows[0]["hompagelocation"].ToString();
+                    image = dt.Rows[0]["hompagepicture"].ToString();
                     detailtext.Text = description;
                     durationlabel.Text = duration1;
                     trippricelabel.Text = tripprice1;
@@ -216,22 +224,7 @@ namespace TravelManagement
                 MyGlobal.displaybooked = 1;
                 if (MyGlobal.loginsucess == 1 || MyGlobal.loginsucess == 2)
                 {
-
-                    //SqlConnection con = new SqlConnection(MyGlobal.constring);
-                    //try
-                    //{
-                    //    con.Open();
-                    //    string query = "insert into booking (name,number,email,date,quantity,location,duration,transport,accomodation,tripprice) Values" +
-                    //        " ('" + nametextbox.Text + "','" + Phone.Text + "','" + Email.Text + "','" + date.Text + "'," +
-                    //        "'" + Quantity.Text + "','" + location + "','" + duration1 + "','" + transport1 + "','" + accomodation1 + "'," +
-                    //        "'" + tripprice1 + "')";
-                    //    SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                    //    sda.SelectCommand.ExecuteNonQuery();
-                    //}
-                    //catch (Exception)
-                    //{
-
-                    //}
+                    Refreshtimer.Start();
                     bookedconform.Visible = true;
                     cancel.Visible = true;
                     MyGlobal.name = nametextbox.Text;
@@ -244,18 +237,25 @@ namespace TravelManagement
                     MyGlobal.transport = transport1;
                     MyGlobal.accomodation = accomodation1;
                     MyGlobal.tripprice = tripprice1;
-
+                    MyGlobal.image = image;
+                    int calculate;
+                   // MessageBox.Show(tripprice1);
+                    int price = Convert.ToInt32(MyGlobal.tripprice);
+                    int quantity = Convert.ToInt32(MyGlobal.quantity);
+                    calculate = price * quantity;
+                    MyGlobal.totalprice = calculate.ToString();
+                    //MessageBox.Show("pro");
                 }
                 else
                 {
                     MyGlobal.displayloginpage = 1;
                 }
             }
-            nametextbox.Text = "Name";
-            Phone.Text ="Mobile Number";
-            Email.Text = "Email";
-            Quantity.Text = "Quantity";
-            date.Text = "DATE";
+            //nametextbox.Text = "Name";
+            //Phone.Text ="Mobile Number";
+            //Email.Text = "Email";
+            //Quantity.Text = "Quantity";
+            //date.Text = "DATE";
         }
 
         private void nametextbox_MouseDown(object sender, MouseEventArgs e)
@@ -300,14 +300,20 @@ namespace TravelManagement
         private void Crossbutton_Click(object sender, EventArgs e)
         {
             MyGlobal.closedetail = 1;
+            MyGlobal.crossbuttonclick = 1;
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
             bookedconform.Visible = false;
             cancel.Visible = false;
+            nametextbox.Text = "Name";
+            Phone.Text = "Mobile Number";
+            Email.Text = "Email";
+            Quantity.Text = "Quantity";
+            date.Text = "DATE";
         }
-        
+
         private void Email_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -345,6 +351,11 @@ namespace TravelManagement
         private void nametextbox_TextChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void bookedconform_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

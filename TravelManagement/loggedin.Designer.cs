@@ -39,13 +39,13 @@
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.usertextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.passwordtextbox = new Guna.UI.WinForms.GunaLineTextBox();
-            this.eye2 = new Guna.UI.WinForms.GunaCircleButton();
-            this.eye = new Guna.UI.WinForms.GunaCircleButton();
             this.loginbutton = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaCircleButton2 = new Guna.UI.WinForms.GunaCircleButton();
-            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.Eyetimer = new System.Windows.Forms.Timer(this.components);
+            this.eye2 = new Guna.UI.WinForms.GunaCircleButton();
+            this.eye = new Guna.UI.WinForms.GunaCircleButton();
+            this.gunaCircleButton2 = new Guna.UI.WinForms.GunaCircleButton();
+            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
             this.register = new TravelManagement.register();
             this.panel1.SuspendLayout();
             this.registerpanel.SuspendLayout();
@@ -159,6 +159,7 @@
             this.usertextbox.Size = new System.Drawing.Size(237, 31);
             this.usertextbox.TabIndex = 8;
             this.usertextbox.Text = "USERNAME";
+            this.usertextbox.Enter += new System.EventHandler(this.usertextbox_Enter);
             this.usertextbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.usertextbox_MouseDown);
             // 
             // passwordtextbox
@@ -176,7 +177,41 @@
             this.passwordtextbox.Size = new System.Drawing.Size(211, 31);
             this.passwordtextbox.TabIndex = 8;
             this.passwordtextbox.Text = "PASSWORD";
+            this.passwordtextbox.Enter += new System.EventHandler(this.passwordtextbox_Enter);
             this.passwordtextbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passwordtextbox_MouseDown);
+            // 
+            // loginbutton
+            // 
+            this.loginbutton.AnimationHoverSpeed = 0.07F;
+            this.loginbutton.AnimationSpeed = 0.03F;
+            this.loginbutton.BackColor = System.Drawing.Color.Transparent;
+            this.loginbutton.BaseColor1 = System.Drawing.SystemColors.AppWorkspace;
+            this.loginbutton.BaseColor2 = System.Drawing.Color.LightSlateGray;
+            this.loginbutton.BorderColor = System.Drawing.Color.Navy;
+            this.loginbutton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.loginbutton.FocusedColor = System.Drawing.Color.Empty;
+            this.loginbutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginbutton.ForeColor = System.Drawing.Color.White;
+            this.loginbutton.Image = null;
+            this.loginbutton.ImageSize = new System.Drawing.Size(20, 20);
+            this.loginbutton.Location = new System.Drawing.Point(120, 204);
+            this.loginbutton.Name = "loginbutton";
+            this.loginbutton.OnHoverBaseColor1 = System.Drawing.Color.LightGray;
+            this.loginbutton.OnHoverBaseColor2 = System.Drawing.Color.DarkGray;
+            this.loginbutton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.loginbutton.OnHoverForeColor = System.Drawing.Color.Gainsboro;
+            this.loginbutton.OnHoverImage = null;
+            this.loginbutton.OnPressedColor = System.Drawing.SystemColors.WindowFrame;
+            this.loginbutton.Radius = 3;
+            this.loginbutton.Size = new System.Drawing.Size(102, 36);
+            this.loginbutton.TabIndex = 0;
+            this.loginbutton.Text = "LOG IN";
+            this.loginbutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.loginbutton.Click += new System.EventHandler(this.loginbutton_Click_1);
+            // 
+            // Eyetimer
+            // 
+            this.Eyetimer.Tick += new System.EventHandler(this.Eyetimer_Tick);
             // 
             // eye2
             // 
@@ -224,35 +259,6 @@
             this.eye.TabIndex = 15;
             this.eye.Click += new System.EventHandler(this.eye_Click);
             // 
-            // loginbutton
-            // 
-            this.loginbutton.AnimationHoverSpeed = 0.07F;
-            this.loginbutton.AnimationSpeed = 0.03F;
-            this.loginbutton.BackColor = System.Drawing.Color.Transparent;
-            this.loginbutton.BaseColor1 = System.Drawing.SystemColors.AppWorkspace;
-            this.loginbutton.BaseColor2 = System.Drawing.Color.LightSlateGray;
-            this.loginbutton.BorderColor = System.Drawing.Color.Navy;
-            this.loginbutton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.loginbutton.FocusedColor = System.Drawing.Color.Empty;
-            this.loginbutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbutton.ForeColor = System.Drawing.Color.White;
-            this.loginbutton.Image = null;
-            this.loginbutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.loginbutton.Location = new System.Drawing.Point(120, 204);
-            this.loginbutton.Name = "loginbutton";
-            this.loginbutton.OnHoverBaseColor1 = System.Drawing.Color.LightGray;
-            this.loginbutton.OnHoverBaseColor2 = System.Drawing.Color.DarkGray;
-            this.loginbutton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.loginbutton.OnHoverForeColor = System.Drawing.Color.Gainsboro;
-            this.loginbutton.OnHoverImage = null;
-            this.loginbutton.OnPressedColor = System.Drawing.SystemColors.WindowFrame;
-            this.loginbutton.Radius = 3;
-            this.loginbutton.Size = new System.Drawing.Size(102, 36);
-            this.loginbutton.TabIndex = 0;
-            this.loginbutton.Text = "LOG IN";
-            this.loginbutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.loginbutton.Click += new System.EventHandler(this.loginbutton_Click_1);
-            // 
             // gunaCircleButton2
             // 
             this.gunaCircleButton2.AnimationHoverSpeed = 0.07F;
@@ -296,10 +302,6 @@
             this.gunaCircleButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaCircleButton1.Size = new System.Drawing.Size(52, 52);
             this.gunaCircleButton1.TabIndex = 2;
-            // 
-            // Eyetimer
-            // 
-            this.Eyetimer.Tick += new System.EventHandler(this.Eyetimer_Tick);
             // 
             // register
             // 

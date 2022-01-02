@@ -65,7 +65,7 @@
             this.Crossbutton.FlatAppearance.BorderSize = 0;
             this.Crossbutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Crossbutton.ForeColor = System.Drawing.Color.Firebrick;
-            this.Crossbutton.Location = new System.Drawing.Point(790, 5);
+            this.Crossbutton.Location = new System.Drawing.Point(708, 5);
             this.Crossbutton.Name = "Crossbutton";
             this.Crossbutton.Size = new System.Drawing.Size(55, 39);
             this.Crossbutton.TabIndex = 10;
@@ -83,7 +83,7 @@
             this.panelforbutton.Controls.Add(this.Add);
             this.panelforbutton.Location = new System.Drawing.Point(0, 0);
             this.panelforbutton.Name = "panelforbutton";
-            this.panelforbutton.Size = new System.Drawing.Size(784, 54);
+            this.panelforbutton.Size = new System.Drawing.Size(671, 54);
             this.panelforbutton.TabIndex = 1;
             // 
             // Deletebutton

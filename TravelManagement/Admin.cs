@@ -22,6 +22,7 @@ namespace TravelManagement
             adminadd.Visible = true;
             admindelete.Visible = false;
             adminupdate.Visible = false;
+            MyGlobal.adminpanneldataremove = 1;
         }
 
         private void Updatebutton_Click(object sender, EventArgs e)
@@ -29,9 +30,8 @@ namespace TravelManagement
             adminadd.Visible = false;
             admindelete.Visible = false;
             adminupdate.Visible = true;
-            
-
             MyGlobal.updatebutton = 1;
+            MyGlobal.adminpanneldataremove = 1;
         }
 
         private void Deletebutton_Click(object sender, EventArgs e)
@@ -40,6 +40,8 @@ namespace TravelManagement
             admindelete.Visible = true;
             adminupdate.Visible = false;
             MyGlobal.deletebutton = 1;
+            MyGlobal.adminpanneldataremove = 1;
+
         }
 
         private void Crossbutton_Click(object sender, EventArgs e)

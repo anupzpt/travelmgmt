@@ -47,12 +47,9 @@
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.adminforntpage = new TravelManagement.adminforntpage();
             this.afterloggeduser = new TravelManagement.afterloggeduser();
             this.afterloggedadmin = new TravelManagement.afterloggedadmin();
             this.loggedin = new TravelManagement.loggedin();
-            this.addnewadmin = new TravelManagement.addnewadmin();
-            this.adminreceive = new TravelManagement.adminreceive();
             this.homepageusercontrol = new TravelManagement.Homepageusercontrol();
             this.trekkingusercontrol = new TravelManagement.trekkingusercontrol();
             this.tourusercontrolform = new TravelManagement.tourusercontrolform();
@@ -64,6 +61,9 @@
             this.logout = new TravelManagement.logout();
             this.receiveuser = new TravelManagement.receiveuser();
             this.bookeddataforadmin = new TravelManagement.bookeddataforadmin();
+            this.adminforntpage = new TravelManagement.adminforntpage();
+            this.adminreceive = new TravelManagement.adminreceive();
+            this.addnewadmin = new TravelManagement.addnewadmin();
             this.refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -345,17 +345,6 @@
             this.panel3.Size = new System.Drawing.Size(840, 299);
             this.panel3.TabIndex = 2;
             // 
-            // adminforntpage
-            // 
-            this.adminforntpage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminforntpage.Location = new System.Drawing.Point(0, 0);
-            this.adminforntpage.Name = "adminforntpage";
-            this.adminforntpage.Size = new System.Drawing.Size(900, 471);
-            this.adminforntpage.TabIndex = 19;
-            this.adminforntpage.Visible = false;
-            // 
             // afterloggeduser
             // 
             this.afterloggeduser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -381,29 +370,6 @@
             this.loggedin.Name = "loggedin";
             this.loggedin.Size = new System.Drawing.Size(383, 366);
             this.loggedin.TabIndex = 7;
-            // 
-            // addnewadmin
-            // 
-            this.addnewadmin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.addnewadmin.Location = new System.Drawing.Point(0, 0);
-            this.addnewadmin.Name = "addnewadmin";
-            this.addnewadmin.Size = new System.Drawing.Size(839, 500);
-            this.addnewadmin.TabIndex = 13;
-            this.addnewadmin.Visible = false;
-            // 
-            // adminreceive
-            // 
-            this.adminreceive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminreceive.BackColor = System.Drawing.Color.Lavender;
-            this.adminreceive.Location = new System.Drawing.Point(0, 0);
-            this.adminreceive.Name = "adminreceive";
-            this.adminreceive.Size = new System.Drawing.Size(827, 505);
-            this.adminreceive.TabIndex = 12;
-            this.adminreceive.Visible = false;
-            this.adminreceive.Load += new System.EventHandler(this.adminreceive_Load);
             // 
             // homepageusercontrol
             // 
@@ -527,6 +493,40 @@
             this.bookeddataforadmin.Size = new System.Drawing.Size(837, 471);
             this.bookeddataforadmin.TabIndex = 18;
             this.bookeddataforadmin.Visible = false;
+            // 
+            // adminforntpage
+            // 
+            this.adminforntpage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminforntpage.Location = new System.Drawing.Point(0, 0);
+            this.adminforntpage.Name = "adminforntpage";
+            this.adminforntpage.Size = new System.Drawing.Size(900, 471);
+            this.adminforntpage.TabIndex = 19;
+            this.adminforntpage.Visible = false;
+            // 
+            // adminreceive
+            // 
+            this.adminreceive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminreceive.BackColor = System.Drawing.Color.Lavender;
+            this.adminreceive.Location = new System.Drawing.Point(0, 0);
+            this.adminreceive.Name = "adminreceive";
+            this.adminreceive.Size = new System.Drawing.Size(827, 505);
+            this.adminreceive.TabIndex = 12;
+            this.adminreceive.Visible = false;
+            this.adminreceive.Load += new System.EventHandler(this.adminreceive_Load);
+            // 
+            // addnewadmin
+            // 
+            this.addnewadmin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.addnewadmin.Location = new System.Drawing.Point(0, 0);
+            this.addnewadmin.Name = "addnewadmin";
+            this.addnewadmin.Size = new System.Drawing.Size(839, 500);
+            this.addnewadmin.TabIndex = 13;
+            this.addnewadmin.Visible = false;
             // 
             // refreshtimer
             // 

@@ -25,6 +25,7 @@ namespace TravelManagement
         public static int treakingbuttonpressed;
         public static int specialbuttonpressed;
         public static int closedetail;
+        public static int crossbuttonclick;
         public static int adminreceive;
         public static int addadmin;
 
@@ -46,6 +47,7 @@ namespace TravelManagement
         public static int emailtimer;
         public static int bookedtimer;
         public static int ticketbook;
+        public static int updatetimer;
         ////////
         public static string name;
         public static string email;
@@ -58,13 +60,17 @@ namespace TravelManagement
         public static string accomodation;
         public static string tripprice;
         public static string ticketno;
+        public static string image;
         public static int displaybooked;
         ////
         public static int inbox;
         public static int inboxuser;
         /////////////
         public static int bookingadmin;
-
+        public static string totalprice;
+        /////
+        public static int globalcross;
+        public static int adminpanneldataremove;
 
 
 

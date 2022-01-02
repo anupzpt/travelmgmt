@@ -50,7 +50,6 @@
             this.homepagebutton1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.Crossbutton = new System.Windows.Forms.Button();
             this.left = new System.Windows.Forms.Button();
             this.right = new System.Windows.Forms.Button();
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
@@ -88,6 +87,7 @@
             // 
             this.detail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.detail.ForeColor = System.Drawing.Color.Black;
             this.detail.Location = new System.Drawing.Point(0, 8);
             this.detail.Name = "detail";
             this.detail.Size = new System.Drawing.Size(900, 419);
@@ -301,7 +301,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel1.Controls.Add(this.Crossbutton);
             this.gunaShadowPanel1.Controls.Add(this.left);
             this.gunaShadowPanel1.Controls.Add(this.right);
             this.gunaShadowPanel1.Location = new System.Drawing.Point(10, 8);
@@ -310,20 +309,6 @@
             this.gunaShadowPanel1.ShadowDepth = 200;
             this.gunaShadowPanel1.Size = new System.Drawing.Size(848, 369);
             this.gunaShadowPanel1.TabIndex = 15;
-            // 
-            // Crossbutton
-            // 
-            this.Crossbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Crossbutton.BackColor = System.Drawing.Color.Transparent;
-            this.Crossbutton.FlatAppearance.BorderSize = 0;
-            this.Crossbutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Crossbutton.ForeColor = System.Drawing.Color.Firebrick;
-            this.Crossbutton.Location = new System.Drawing.Point(793, 4);
-            this.Crossbutton.Name = "Crossbutton";
-            this.Crossbutton.Size = new System.Drawing.Size(55, 39);
-            this.Crossbutton.TabIndex = 18;
-            this.Crossbutton.Text = "X";
-            this.Crossbutton.UseVisualStyleBackColor = false;
             // 
             // left
             // 
@@ -410,7 +395,6 @@
         private System.Windows.Forms.Button left;
         private System.Windows.Forms.Button right;
         private System.Windows.Forms.Timer Refreshtimer;
-        private System.Windows.Forms.Button Crossbutton;
         private Detail detail;
     }
 }

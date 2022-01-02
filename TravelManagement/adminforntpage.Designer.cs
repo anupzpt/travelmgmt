@@ -96,7 +96,7 @@
             // 
             this.adminimage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminimage.Location = new System.Drawing.Point(0, 0);
+            this.adminimage.Location = new System.Drawing.Point(0, 1);
             this.adminimage.Name = "adminimage";
             this.adminimage.Size = new System.Drawing.Size(905, 468);
             this.adminimage.TabIndex = 2;

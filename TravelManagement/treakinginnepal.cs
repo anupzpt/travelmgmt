@@ -135,22 +135,42 @@ namespace TravelManagement
 
         private void Refreshtimer_Tick(object sender, EventArgs e)
         {
-            if(MyGlobal.closedetail==1)
+            //if(MyGlobal.closedetail==1)
+            //{
+            //    detail.Visible = false;
+            //    MyGlobal.closedetail = 0;
+            //}
+            if (MyGlobal.globalcross == 1)
             {
+                MyGlobal.globalcross = 0;
                 detail.Visible = false;
-                MyGlobal.closedetail = 0;
+            }
+            if (MyGlobal.crossbuttonclick == 1)
+            {
+                MyGlobal.crossbuttonclick = 0;
+                detail.Visible = false;
             }
         }
-        int countrightclick = 1;
+        int countrightclick = 0;
         int countleftclick = 0;
 
         private void left_Click(object sender, EventArgs e)
         {
-            if (countleftclick == 0)            {                SN = SN - 5;                countleftclick++;                countrightclick = 0;            }
-            SqlConnection con = new SqlConnection(MyGlobal.constring);
+            pictureBox2.Visible = true;
+            trekbutton2.Visible = true;
+            treklabel2.Visible = true;
+            pictureBox3.Visible = true;
+            trekbutton3.Visible = true;
+            treklabel3.Visible = true;
+            pictureBox4.Visible = true;
+            trekbutton4.Visible = true;
+            treklabel4.Visible = true;
+
+            countrightclick = 0;
+             SqlConnection con = new SqlConnection(MyGlobal.constring);
             con.Open();
             int count = 1;
-            for (int i = 1; i <= 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 try
                 {
@@ -158,27 +178,28 @@ namespace TravelManagement
                     SqlDataAdapter sda = new SqlDataAdapter(image, con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
-                    string destination = dt.Rows[SN]["treklocation"].ToString();
-                    string label = dt.Rows[SN]["trekpricelabel"].ToString();
-                    string bestpanel = dt.Rows[SN]["trekpicture"].ToString();
-                    button1value = dt.Rows[SN]["SN"].ToString();
-                    if (count == 1)                    {                        SN = SN - 1;
-                        pictureBox4.Image = Image.FromFile(bestpanel);
-                        trekbutton4.Text = destination;
-                        treklabel4.Text = label;
-                    }                    if (count == 2)                    {                        SN = SN - 1;
-                        pictureBox3.Image = Image.FromFile(bestpanel);
-                        trekbutton3.Text = destination;
-                        treklabel3.Text = label;
-                    }                    if (count == 3)                    {                        SN = SN -1;
-                        pictureBox2.Image = Image.FromFile(bestpanel);
-                        trekbutton2.Text = destination;
-                        treklabel2.Text = label;
-                    }                    if (count == 4)                    {                        SN = SN - 1;
+                    string destination = dt.Rows[i]["treklocation"].ToString();
+                    string label = dt.Rows[i]["trekpricelabel"].ToString();
+                    string bestpanel = dt.Rows[i]["trekpicture"].ToString();
+                    button1value = dt.Rows[i]["SN"].ToString();
+                    if (count == 1)                    {                        //SN = SN - 1;
                         pictureBox1.Image = Image.FromFile(bestpanel);
                         trekbutton1.Text = destination;
                         treklabel1.Text = label;
-                        count = 1;                    }                    count++;
+                    }                    if (count == 2)                    {                        //SN = SN - 1;
+                        pictureBox2.Image = Image.FromFile(bestpanel);
+                        trekbutton2.Text = destination;
+                        treklabel2.Text = label;
+                    }                    if (count == 3)                    {                        //SN = SN -1;
+                        pictureBox3.Image = Image.FromFile(bestpanel);
+                        trekbutton3.Text = destination;
+                        treklabel3.Text = label;
+                    }                    if (count == 4)                    {                        //SN = SN - 1;
+                        pictureBox4.Image = Image.FromFile(bestpanel);
+                        trekbutton4.Text = destination;
+                        treklabel4.Text = label;
+                        
+                    }                    count++;
 
                 }
                 catch (Exception ex)
@@ -187,6 +208,8 @@ namespace TravelManagement
                 }
                 finally
                 {
+                    SN = i;
+                    SN++;
                     con.Close();
                 }
             }
@@ -195,15 +218,10 @@ namespace TravelManagement
 
         private void right_Click(object sender, EventArgs e)
         {
-            if(countrightclick==0)
-            {
-                SN = SN + 5;
-                countleftclick = 0;
-                countrightclick++;
-            }
             SqlConnection con = new SqlConnection(MyGlobal.constring);
             con.Open();
             int count = 1;
+            int temp = 0;
             for(int i=1;i<=4;i++)
             {
                 try
@@ -237,7 +255,62 @@ namespace TravelManagement
                 }
                 catch (Exception ex)
                 {
+                    int j=0;
+                    if (count==2)
+                    {
+                        for (j = 0; j < 3; j++)
+                        {
+                            if(j==0)
+                            {
+                                pictureBox2.Visible=false;
+                                trekbutton2.Visible = false;
+                                treklabel2.Visible = false;
+                            }
+                            if(j==1)
+                            {
+                                pictureBox3.Visible = false;
+                                trekbutton3.Visible = false;
+                                treklabel3.Visible = false;
+                            }
+                            if (j == 2)
+                            {
+                                pictureBox4.Visible = false;
+                                trekbutton4.Visible = false;
+                                treklabel4.Visible = false;
+                            }
+                        }
+                        if(count==3)
+                        {
+                            for (j = 0; j < 2; j++)
+                            {
+                                if (j == 0)
+                                {
+                                    pictureBox2.Visible = false;
+                                    trekbutton2.Visible = false;
+                                    treklabel2.Visible = false;
+                                }
+                                if (j == 1)
+                                {
+                                    pictureBox3.Visible = false;
+                                    trekbutton3.Visible = false;
+                                    treklabel3.Visible = false;
+                                }
+                            }
+                        }
+                        if (count == 4)
+                        {
+                            for (j = 0; j < 1; j++)
+                            {
+                                if (j == 0)
+                                {
+                                    pictureBox2.Visible = false;
+                                    trekbutton2.Visible = false;
+                                    treklabel2.Visible = false;
+                                }
+                            }
+                        }
 
+                    }
                 }
                 finally
                 {

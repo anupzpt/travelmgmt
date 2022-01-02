@@ -66,6 +66,7 @@
             this.rewrite.TabIndex = 3;
             this.rewrite.Text = "RE-ENTER";
             this.rewrite.TextChanged += new System.EventHandler(this.rewrite_TextChanged);
+            this.rewrite.Enter += new System.EventHandler(this.rewrite_Enter);
             this.rewrite.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseClick);
             // 
             // panel1
@@ -229,6 +230,7 @@
             this.password.Size = new System.Drawing.Size(237, 31);
             this.password.TabIndex = 2;
             this.password.Text = "PASSWORD";
+            this.password.Enter += new System.EventHandler(this.password_Enter);
             this.password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseClick);
             // 
             // emailtextbox
@@ -246,7 +248,8 @@
             this.emailtextbox.Size = new System.Drawing.Size(237, 31);
             this.emailtextbox.TabIndex = 1;
             this.emailtextbox.Text = "EMAIL";
-            this.emailtextbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseClick);
+            this.emailtextbox.Enter += new System.EventHandler(this.emailtextbox_Enter);
+            this.emailtextbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseDown_1);
             // 
             // usernametext
             // 
@@ -263,8 +266,8 @@
             this.usernametext.Size = new System.Drawing.Size(237, 31);
             this.usernametext.TabIndex = 0;
             this.usernametext.Text = "USERNAME";
+            this.usernametext.Enter += new System.EventHandler(this.usernametext_Enter);
             this.usernametext.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseClick);
-            this.usernametext.MouseDown += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseDown_1);
             // 
             // gunaCircleButton2
             // 

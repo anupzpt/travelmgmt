@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.detail = new TravelManagement.Detail();
             this.trekkingnepal = new System.Windows.Forms.Label();
             this.bestpanel1 = new System.Windows.Forms.Panel();
             this.treklabel1 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.left = new System.Windows.Forms.Button();
             this.right = new System.Windows.Forms.Button();
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
-            this.detail = new TravelManagement.Detail();
             this.panel1.SuspendLayout();
             this.bestpanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +82,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(927, 424);
             this.panel1.TabIndex = 10;
+            // 
+            // detail
+            // 
+            this.detail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.detail.ForeColor = System.Drawing.Color.Black;
+            this.detail.Location = new System.Drawing.Point(0, 0);
+            this.detail.Name = "detail";
+            this.detail.Size = new System.Drawing.Size(927, 424);
+            this.detail.TabIndex = 15;
+            this.detail.Visible = false;
             // 
             // trekkingnepal
             // 
@@ -334,16 +345,6 @@
             // Refreshtimer
             // 
             this.Refreshtimer.Tick += new System.EventHandler(this.Refreshtimer_Tick);
-            // 
-            // detail
-            // 
-            this.detail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.detail.Location = new System.Drawing.Point(0, 0);
-            this.detail.Name = "detail";
-            this.detail.Size = new System.Drawing.Size(927, 424);
-            this.detail.TabIndex = 15;
-            this.detail.Visible = false;
             // 
             // treakinginnepal
             // 

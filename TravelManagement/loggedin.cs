@@ -135,5 +135,15 @@ namespace TravelManagement
         {
             passwordtextbox.Text = null;
         }
+
+        private void usertextbox_Enter(object sender, EventArgs e)
+        {
+            usertextbox.Text = null;
+        }
+
+        private void passwordtextbox_Enter(object sender, EventArgs e)
+        {
+            passwordtextbox.Text = null;
+        }
     }
 }

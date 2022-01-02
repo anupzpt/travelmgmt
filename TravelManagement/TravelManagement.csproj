@@ -259,6 +259,12 @@
       <DependentUpon>mandaladesign.cs</DependentUpon>
     </Compile>
     <Compile Include="MyGlobal.cs" />
+    <Compile Include="printticket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="printticket.Designer.cs">
+      <DependentUpon>printticket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.cs">
@@ -689,6 +695,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_reset_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addadmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_email_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_email_100px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_property_60px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

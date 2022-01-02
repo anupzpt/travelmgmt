@@ -25,6 +25,7 @@ namespace TravelManagement
         private void tourinnepal_Load(object sender, EventArgs e)
         {
             //lost.Visible = false;
+          //  detail.Visible = false;
             tournepal.Location = new Point(635, 45);
             bestpanel1.Location = new Point(100, 100);
             bestpanel2.Location = new Point(400, 100);
@@ -129,10 +130,22 @@ namespace TravelManagement
 
         private void Refreshtimer_Tick(object sender, EventArgs e)
         {
-            if (MyGlobal.closedetail == 1)
+
+            //if (MyGlobal.closedetail == 1)
+            //{
+            //    detail.Visible = false;
+            //    MessageBox.Show("gsgs");
+            //    MyGlobal.closedetail = 0;
+            //}
+            if(MyGlobal.globalcross == 1)
             {
+                MyGlobal.globalcross = 0;
                 detail.Visible = false;
-                MyGlobal.closedetail = 0;
+            }
+            if (MyGlobal.crossbuttonclick == 1)
+            {
+                MyGlobal.crossbuttonclick = 0;
+                detail.Visible = false;
             }
         }
         int countrightclick = 1;

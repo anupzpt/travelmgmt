@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(search));
             this.panel1 = new System.Windows.Forms.Panel();
             this.findyourdestination = new System.Windows.Forms.Label();
-            this.searchbox = new Bunifu.Framework.UI.BunifuTextbox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +40,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = global::TravelManagement.Properties.Resources.Untitled_1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.searchbox);
             this.panel1.Controls.Add(this.findyourdestination);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -59,19 +56,6 @@
             this.findyourdestination.Size = new System.Drawing.Size(252, 26);
             this.findyourdestination.TabIndex = 5;
             this.findyourdestination.Text = "FIND YOUR DESTINATON";
-            // 
-            // searchbox
-            // 
-            this.searchbox.BackColor = System.Drawing.Color.Silver;
-            this.searchbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchbox.BackgroundImage")));
-            this.searchbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.searchbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.searchbox.Icon = ((System.Drawing.Image)(resources.GetObject("searchbox.Icon")));
-            this.searchbox.Location = new System.Drawing.Point(269, 116);
-            this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(250, 42);
-            this.searchbox.TabIndex = 6;
-            this.searchbox.text = "Search By Location";
             // 
             // search
             // 
@@ -90,6 +74,5 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label findyourdestination;
-        private Bunifu.Framework.UI.BunifuTextbox searchbox;
     }
 }

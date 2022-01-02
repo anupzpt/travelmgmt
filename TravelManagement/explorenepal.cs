@@ -127,10 +127,15 @@ namespace TravelManagement
 
         private void Refreshtimer_Tick(object sender, EventArgs e)
         {
-            if (MyGlobal.closedetail == 1)
+            //if (MyGlobal.closedetail == 1)
+            //{
+            //    detail.Visible = false;
+            //    MyGlobal.closedetail = 0;
+            //}
+            if (MyGlobal.crossbuttonclick == 1)
             {
+                MyGlobal.crossbuttonclick = 0;
                 detail.Visible = false;
-                MyGlobal.closedetail = 0;
             }
         }
         int countrightclick = 1;
@@ -244,7 +249,6 @@ namespace TravelManagement
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            Crossbutton.Visible = false;
         }
 
         private void detail_Load(object sender, EventArgs e)
