@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\Project\TravelManagement\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>dll files\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\Project\TravelManagement\bin\Debug\Guna.UI.dll</HintPath>
+      <HintPath>dll files\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
