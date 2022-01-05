@@ -310,7 +310,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TravelManagement.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(192, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

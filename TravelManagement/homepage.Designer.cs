@@ -31,6 +31,7 @@
             this.homepagepanel = new System.Windows.Forms.Panel();
             this.right = new Guna.UI.WinForms.GunaImageButton();
             this.left = new Guna.UI.WinForms.GunaImageButton();
+            this.homepagetext = new System.Windows.Forms.Label();
             this.homepagepanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,6 +41,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.homepagepanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homepagepanel.Controls.Add(this.homepagetext);
             this.homepagepanel.Controls.Add(this.right);
             this.homepagepanel.Controls.Add(this.left);
             this.homepagepanel.Location = new System.Drawing.Point(0, 0);
@@ -80,6 +82,20 @@
             this.left.TabIndex = 22;
             this.left.Click += new System.EventHandler(this.left_Click);
             // 
+            // homepagetext
+            // 
+            this.homepagetext.AutoSize = true;
+            this.homepagetext.BackColor = System.Drawing.Color.Transparent;
+            this.homepagetext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepagetext.Font = new System.Drawing.Font("Playfair Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homepagetext.ForeColor = System.Drawing.Color.Azure;
+            this.homepagetext.Location = new System.Drawing.Point(527, 75);
+            this.homepagetext.Name = "homepagetext";
+            this.homepagetext.Size = new System.Drawing.Size(410, 64);
+            this.homepagetext.TabIndex = 24;
+            this.homepagetext.Text = "EXPLORE NEPAL";
+            this.homepagetext.Click += new System.EventHandler(this.homepagetext_Click);
+            // 
             // homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,6 +105,7 @@
             this.Size = new System.Drawing.Size(840, 405);
             this.Load += new System.EventHandler(this.homepage_Load_1);
             this.homepagepanel.ResumeLayout(false);
+            this.homepagepanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -98,5 +115,6 @@
         private System.Windows.Forms.Panel homepagepanel;
         private Guna.UI.WinForms.GunaImageButton right;
         private Guna.UI.WinForms.GunaImageButton left;
+        private System.Windows.Forms.Label homepagetext;
     }
 }

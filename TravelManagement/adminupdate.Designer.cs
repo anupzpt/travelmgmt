@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.descriptiontextbox = new System.Windows.Forms.TextBox();
             this.selectComboBox = new Guna.UI.WinForms.GunaComboBox();
             this.selectdata = new System.Windows.Forms.Label();
             this.days = new Guna.UI.WinForms.GunaLabel();
@@ -39,7 +40,6 @@
             this.transporttextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.destinationtextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.trippricetextbox = new Guna.UI.WinForms.GunaLineTextBox();
-            this.descriptiontextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.Durationtextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.accomodationtextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.imagetextbox = new Guna.UI.WinForms.GunaLineTextBox();
@@ -78,6 +78,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.descriptiontextbox);
             this.panel1.Controls.Add(this.selectComboBox);
             this.panel1.Controls.Add(this.selectdata);
             this.panel1.Controls.Add(this.days);
@@ -86,7 +87,6 @@
             this.panel1.Controls.Add(this.transporttextbox);
             this.panel1.Controls.Add(this.destinationtextbox);
             this.panel1.Controls.Add(this.trippricetextbox);
-            this.panel1.Controls.Add(this.descriptiontextbox);
             this.panel1.Controls.Add(this.Durationtextbox);
             this.panel1.Controls.Add(this.accomodationtextbox);
             this.panel1.Controls.Add(this.imagetextbox);
@@ -102,6 +102,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(796, 348);
             this.panel1.TabIndex = 10;
+            // 
+            // descriptiontextbox
+            // 
+            this.descriptiontextbox.BackColor = System.Drawing.Color.Lavender;
+            this.descriptiontextbox.Font = new System.Drawing.Font("Playfair Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptiontextbox.Location = new System.Drawing.Point(181, 128);
+            this.descriptiontextbox.Multiline = true;
+            this.descriptiontextbox.Name = "descriptiontextbox";
+            this.descriptiontextbox.Size = new System.Drawing.Size(308, 30);
+            this.descriptiontextbox.TabIndex = 26;
             // 
             // selectComboBox
             // 
@@ -217,20 +227,6 @@
             this.trippricetextbox.SelectedText = "";
             this.trippricetextbox.Size = new System.Drawing.Size(308, 32);
             this.trippricetextbox.TabIndex = 2;
-            // 
-            // descriptiontextbox
-            // 
-            this.descriptiontextbox.BackColor = System.Drawing.Color.Lavender;
-            this.descriptiontextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.descriptiontextbox.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.descriptiontextbox.Font = new System.Drawing.Font("Playfair Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptiontextbox.LineColor = System.Drawing.Color.DarkGray;
-            this.descriptiontextbox.Location = new System.Drawing.Point(181, 123);
-            this.descriptiontextbox.Name = "descriptiontextbox";
-            this.descriptiontextbox.PasswordChar = '\0';
-            this.descriptiontextbox.SelectedText = "";
-            this.descriptiontextbox.Size = new System.Drawing.Size(308, 32);
-            this.descriptiontextbox.TabIndex = 3;
             // 
             // Durationtextbox
             // 
@@ -420,7 +416,6 @@
         private Guna.UI.WinForms.GunaLineTextBox transporttextbox;
         private Guna.UI.WinForms.GunaLineTextBox destinationtextbox;
         private Guna.UI.WinForms.GunaLineTextBox trippricetextbox;
-        private Guna.UI.WinForms.GunaLineTextBox descriptiontextbox;
         private Guna.UI.WinForms.GunaLineTextBox Durationtextbox;
         private Guna.UI.WinForms.GunaLineTextBox accomodationtextbox;
         private Guna.UI.WinForms.GunaLineTextBox imagetextbox;
@@ -435,5 +430,6 @@
         private System.Windows.Forms.Label updatepackagetext;
         private System.Windows.Forms.Timer Refreshtimer;
         private System.Windows.Forms.Timer admincrossbutton;
+        private System.Windows.Forms.TextBox descriptiontextbox;
     }
 }

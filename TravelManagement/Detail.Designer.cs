@@ -33,6 +33,7 @@
             this.detailpanel = new System.Windows.Forms.Panel();
             this.detailshadowpanel = new Guna.UI.WinForms.GunaShadowPanel();
             this.cancel = new Guna.UI.WinForms.GunaGradientButton();
+            this.bookedconform = new TravelManagement.bookedconform();
             this.bookpanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.emailvalidation = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.excludebutton = new Guna.UI.WinForms.GunaGradientButton();
             this.includebutton = new Guna.UI.WinForms.GunaGradientButton();
-            this.photobutton = new Guna.UI.WinForms.GunaGradientButton();
             this.detailbutton = new Guna.UI.WinForms.GunaGradientButton();
             this.includepanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -71,7 +71,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.bookedconform = new TravelManagement.bookedconform();
+            this.Rs = new System.Windows.Forms.Label();
             this.detailpanel.SuspendLayout();
             this.detailshadowpanel.SuspendLayout();
             this.bookpanel.SuspendLayout();
@@ -147,6 +147,14 @@
             this.cancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cancel.Visible = false;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
+            // bookedconform
+            // 
+            this.bookedconform.Location = new System.Drawing.Point(0, 0);
+            this.bookedconform.Name = "bookedconform";
+            this.bookedconform.Size = new System.Drawing.Size(730, 426);
+            this.bookedconform.TabIndex = 16;
+            this.bookedconform.Load += new System.EventHandler(this.bookedconform_Load);
             // 
             // bookpanel
             // 
@@ -388,6 +396,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.Rs);
             this.bunifuGradientPanel1.Controls.Add(this.day);
             this.bunifuGradientPanel1.Controls.Add(this.accomodationlabel);
             this.bunifuGradientPanel1.Controls.Add(this.accomodation);
@@ -461,7 +470,7 @@
             // 
             this.trippricelabel.AutoSize = true;
             this.trippricelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trippricelabel.Location = new System.Drawing.Point(19, 111);
+            this.trippricelabel.Location = new System.Drawing.Point(47, 110);
             this.trippricelabel.Name = "trippricelabel";
             this.trippricelabel.Size = new System.Drawing.Size(21, 20);
             this.trippricelabel.TabIndex = 5;
@@ -499,11 +508,10 @@
             // 
             // detailtext
             // 
-            this.detailtext.AutoSize = true;
             this.detailtext.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detailtext.Location = new System.Drawing.Point(0, 3);
+            this.detailtext.Location = new System.Drawing.Point(3, 12);
             this.detailtext.Name = "detailtext";
-            this.detailtext.Size = new System.Drawing.Size(25, 24);
+            this.detailtext.Size = new System.Drawing.Size(555, 112);
             this.detailtext.TabIndex = 0;
             this.detailtext.Text = "...\r\n";
             // 
@@ -511,7 +519,6 @@
             // 
             this.panel1.Controls.Add(this.excludebutton);
             this.panel1.Controls.Add(this.includebutton);
-            this.panel1.Controls.Add(this.photobutton);
             this.panel1.Controls.Add(this.detailbutton);
             this.panel1.Location = new System.Drawing.Point(24, 14);
             this.panel1.Name = "panel1";
@@ -575,35 +582,6 @@
             this.includebutton.Text = "INCLUDE";
             this.includebutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.includebutton.Click += new System.EventHandler(this.includebutton_Click);
-            // 
-            // photobutton
-            // 
-            this.photobutton.AnimationHoverSpeed = 0.07F;
-            this.photobutton.AnimationSpeed = 0.03F;
-            this.photobutton.BackColor = System.Drawing.Color.Transparent;
-            this.photobutton.BaseColor1 = System.Drawing.SystemColors.AppWorkspace;
-            this.photobutton.BaseColor2 = System.Drawing.Color.LightSlateGray;
-            this.photobutton.BorderColor = System.Drawing.Color.Black;
-            this.photobutton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.photobutton.FocusedColor = System.Drawing.Color.Empty;
-            this.photobutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.photobutton.ForeColor = System.Drawing.Color.White;
-            this.photobutton.Image = null;
-            this.photobutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.photobutton.Location = new System.Drawing.Point(401, 1);
-            this.photobutton.Name = "photobutton";
-            this.photobutton.OnHoverBaseColor1 = System.Drawing.Color.LightGray;
-            this.photobutton.OnHoverBaseColor2 = System.Drawing.Color.DarkGray;
-            this.photobutton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.photobutton.OnHoverForeColor = System.Drawing.Color.Gainsboro;
-            this.photobutton.OnHoverImage = null;
-            this.photobutton.OnPressedColor = System.Drawing.SystemColors.ActiveCaption;
-            this.photobutton.Radius = 3;
-            this.photobutton.Size = new System.Drawing.Size(116, 42);
-            this.photobutton.TabIndex = 6;
-            this.photobutton.Text = "PHOTOS";
-            this.photobutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.photobutton.Click += new System.EventHandler(this.photobutton_Click);
             // 
             // detailbutton
             // 
@@ -713,13 +691,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // bookedconform
+            // Rs
             // 
-            this.bookedconform.Location = new System.Drawing.Point(0, 0);
-            this.bookedconform.Name = "bookedconform";
-            this.bookedconform.Size = new System.Drawing.Size(730, 426);
-            this.bookedconform.TabIndex = 16;
-            this.bookedconform.Load += new System.EventHandler(this.bookedconform_Load);
+            this.Rs.AutoSize = true;
+            this.Rs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rs.Location = new System.Drawing.Point(14, 111);
+            this.Rs.Name = "Rs";
+            this.Rs.Size = new System.Drawing.Size(33, 18);
+            this.Rs.TabIndex = 11;
+            this.Rs.Text = "RS ";
             // 
             // Detail
             // 
@@ -735,7 +715,6 @@
             this.bookpanel.ResumeLayout(false);
             this.bookpanel.PerformLayout();
             this.detaillabel.ResumeLayout(false);
-            this.detaillabel.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -779,7 +758,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaGradientButton excludebutton;
         private Guna.UI.WinForms.GunaGradientButton includebutton;
-        private Guna.UI.WinForms.GunaGradientButton photobutton;
         private Guna.UI.WinForms.GunaGradientButton detailbutton;
         private Bunifu.Framework.UI.BunifuGradientPanel includepanel;
         private System.Windows.Forms.Panel panel2;
@@ -794,5 +772,6 @@
         private System.Windows.Forms.Label emailvalidation;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Rs;
     }
 }

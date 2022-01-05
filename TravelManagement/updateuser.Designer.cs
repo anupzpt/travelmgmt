@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.addpackagetext = new System.Windows.Forms.Label();
-            this.timerbook = new System.Windows.Forms.Timer(this.components);
+            this.left = new System.Windows.Forms.Button();
+            this.right = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.updatebutton = new Guna.UI.WinForms.GunaGradientButton();
             this.ticketno = new System.Windows.Forms.Label();
             this.ticket = new System.Windows.Forms.Label();
             this.datetextbox = new Guna.UI.WinForms.GunaLineTextBox();
@@ -53,10 +54,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.right = new System.Windows.Forms.Button();
-            this.left = new System.Windows.Forms.Button();
+            this.addpackagetext = new System.Windows.Forms.Label();
+            this.timerbook = new System.Windows.Forms.Timer(this.components);
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
-            this.updatebutton = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaShadowPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagepicturebox)).BeginInit();
@@ -64,6 +64,8 @@
             // 
             // gunaShadowPanel1
             // 
+            this.gunaShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.Lavender;
             this.gunaShadowPanel1.Controls.Add(this.left);
@@ -76,19 +78,36 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(852, 417);
             this.gunaShadowPanel1.TabIndex = 0;
             // 
-            // addpackagetext
+            // left
             // 
-            this.addpackagetext.AutoSize = true;
-            this.addpackagetext.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addpackagetext.Location = new System.Drawing.Point(235, 3);
-            this.addpackagetext.Name = "addpackagetext";
-            this.addpackagetext.Size = new System.Drawing.Size(303, 34);
-            this.addpackagetext.TabIndex = 9;
-            this.addpackagetext.Text = "UPDATE YOUR BOOKING";
+            this.left.BackColor = System.Drawing.Color.Transparent;
+            this.left.BackgroundImage = global::TravelManagement.Properties.Resources.left_52px;
+            this.left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.left.FlatAppearance.BorderSize = 0;
+            this.left.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.left.ForeColor = System.Drawing.Color.Firebrick;
+            this.left.Location = new System.Drawing.Point(0, 0);
+            this.left.Name = "left";
+            this.left.Size = new System.Drawing.Size(53, 44);
+            this.left.TabIndex = 30;
+            this.left.UseVisualStyleBackColor = false;
+            this.left.Click += new System.EventHandler(this.left_Click);
             // 
-            // timerbook
+            // right
             // 
-            this.timerbook.Tick += new System.EventHandler(this.timerbook_Tick_1);
+            this.right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.right.BackColor = System.Drawing.Color.Transparent;
+            this.right.BackgroundImage = global::TravelManagement.Properties.Resources.right_52px;
+            this.right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.right.FlatAppearance.BorderSize = 0;
+            this.right.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.right.ForeColor = System.Drawing.Color.Firebrick;
+            this.right.Location = new System.Drawing.Point(796, 3);
+            this.right.Name = "right";
+            this.right.Size = new System.Drawing.Size(53, 44);
+            this.right.TabIndex = 31;
+            this.right.UseVisualStyleBackColor = false;
+            this.right.Click += new System.EventHandler(this.right_Click);
             // 
             // panel1
             // 
@@ -119,6 +138,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(796, 354);
             this.panel1.TabIndex = 11;
+            // 
+            // updatebutton
+            // 
+            this.updatebutton.AnimationHoverSpeed = 0.07F;
+            this.updatebutton.AnimationSpeed = 0.03F;
+            this.updatebutton.BackColor = System.Drawing.Color.Transparent;
+            this.updatebutton.BaseColor1 = System.Drawing.SystemColors.AppWorkspace;
+            this.updatebutton.BaseColor2 = System.Drawing.Color.LightSlateGray;
+            this.updatebutton.BorderColor = System.Drawing.Color.Navy;
+            this.updatebutton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.updatebutton.FocusedColor = System.Drawing.Color.Empty;
+            this.updatebutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebutton.ForeColor = System.Drawing.Color.White;
+            this.updatebutton.Image = null;
+            this.updatebutton.ImageSize = new System.Drawing.Size(20, 20);
+            this.updatebutton.Location = new System.Drawing.Point(622, 269);
+            this.updatebutton.Name = "updatebutton";
+            this.updatebutton.OnHoverBaseColor1 = System.Drawing.Color.LightGray;
+            this.updatebutton.OnHoverBaseColor2 = System.Drawing.Color.DarkGray;
+            this.updatebutton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.updatebutton.OnHoverForeColor = System.Drawing.Color.Gainsboro;
+            this.updatebutton.OnHoverImage = null;
+            this.updatebutton.OnPressedColor = System.Drawing.SystemColors.WindowFrame;
+            this.updatebutton.Radius = 3;
+            this.updatebutton.Size = new System.Drawing.Size(113, 42);
+            this.updatebutton.TabIndex = 30;
+            this.updatebutton.Text = "UPDATE";
+            this.updatebutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.updatebutton.Click += new System.EventHandler(this.updatebutton_Click);
             // 
             // ticketno
             // 
@@ -362,70 +410,23 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "TRIP PRICE";
             // 
-            // right
+            // addpackagetext
             // 
-            this.right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.right.BackColor = System.Drawing.Color.Transparent;
-            this.right.BackgroundImage = global::TravelManagement.Properties.Resources.right_52px;
-            this.right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.right.FlatAppearance.BorderSize = 0;
-            this.right.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.right.ForeColor = System.Drawing.Color.Firebrick;
-            this.right.Location = new System.Drawing.Point(796, 3);
-            this.right.Name = "right";
-            this.right.Size = new System.Drawing.Size(53, 44);
-            this.right.TabIndex = 31;
-            this.right.UseVisualStyleBackColor = false;
-            this.right.Click += new System.EventHandler(this.right_Click);
+            this.addpackagetext.AutoSize = true;
+            this.addpackagetext.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addpackagetext.Location = new System.Drawing.Point(235, 3);
+            this.addpackagetext.Name = "addpackagetext";
+            this.addpackagetext.Size = new System.Drawing.Size(303, 34);
+            this.addpackagetext.TabIndex = 9;
+            this.addpackagetext.Text = "UPDATE YOUR BOOKING";
             // 
-            // left
+            // timerbook
             // 
-            this.left.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.left.BackColor = System.Drawing.Color.Transparent;
-            this.left.BackgroundImage = global::TravelManagement.Properties.Resources.left_52px;
-            this.left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.left.FlatAppearance.BorderSize = 0;
-            this.left.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.left.ForeColor = System.Drawing.Color.Firebrick;
-            this.left.Location = new System.Drawing.Point(1, 1);
-            this.left.Name = "left";
-            this.left.Size = new System.Drawing.Size(53, 44);
-            this.left.TabIndex = 30;
-            this.left.UseVisualStyleBackColor = false;
-            this.left.Click += new System.EventHandler(this.left_Click);
+            this.timerbook.Tick += new System.EventHandler(this.timerbook_Tick_1);
             // 
             // Refreshtimer
             // 
             this.Refreshtimer.Tick += new System.EventHandler(this.Refreshtimer_Tick);
-            // 
-            // updatebutton
-            // 
-            this.updatebutton.AnimationHoverSpeed = 0.07F;
-            this.updatebutton.AnimationSpeed = 0.03F;
-            this.updatebutton.BackColor = System.Drawing.Color.Transparent;
-            this.updatebutton.BaseColor1 = System.Drawing.SystemColors.AppWorkspace;
-            this.updatebutton.BaseColor2 = System.Drawing.Color.LightSlateGray;
-            this.updatebutton.BorderColor = System.Drawing.Color.Navy;
-            this.updatebutton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.updatebutton.FocusedColor = System.Drawing.Color.Empty;
-            this.updatebutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatebutton.ForeColor = System.Drawing.Color.White;
-            this.updatebutton.Image = null;
-            this.updatebutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.updatebutton.Location = new System.Drawing.Point(622, 269);
-            this.updatebutton.Name = "updatebutton";
-            this.updatebutton.OnHoverBaseColor1 = System.Drawing.Color.LightGray;
-            this.updatebutton.OnHoverBaseColor2 = System.Drawing.Color.DarkGray;
-            this.updatebutton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.updatebutton.OnHoverForeColor = System.Drawing.Color.Gainsboro;
-            this.updatebutton.OnHoverImage = null;
-            this.updatebutton.OnPressedColor = System.Drawing.SystemColors.WindowFrame;
-            this.updatebutton.Radius = 3;
-            this.updatebutton.Size = new System.Drawing.Size(113, 42);
-            this.updatebutton.TabIndex = 30;
-            this.updatebutton.Text = "UPDATE";
-            this.updatebutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.updatebutton.Click += new System.EventHandler(this.updatebutton_Click);
             // 
             // updateuser
             // 

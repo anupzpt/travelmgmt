@@ -277,7 +277,7 @@ namespace TravelManagement
 
         private void Home_Click_1(object sender, EventArgs e)
         {
-           
+            MyGlobal.globalcross = 1;
             homepageusercontrol.Visible = true;
             aboutususercontrol.Visible = false;
             tourusercontrolform.Visible = false;

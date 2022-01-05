@@ -28,8 +28,10 @@ namespace TravelManagement
             hiking.Size = new Size(900, 400);
             //  rara.Location = new Point(0, 1510);
             // rara.Size = new Size(840, 261);
-            lastpanel.Location = new Point(0, 1600);
-            lastpanel.Size = new Size(840, 400);
+            lastpanel.Location = new Point(0, 1700);
+            lastpanel.Size = new Size(900, 400);
+            lastpanelre.Location = new Point(0, 1600);
+            lastpanelre.Size = new Size(840, 400);
         }
     }
 }

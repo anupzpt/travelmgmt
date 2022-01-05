@@ -30,21 +30,24 @@
         {
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.picturepanel = new System.Windows.Forms.Panel();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.imagepanel = new System.Windows.Forms.Panel();
             this.savebutton = new Guna.UI.WinForms.GunaGradientButton();
             this.filebutton = new Guna.UI.WinForms.GunaButton();
             this.imagetextbox = new Guna.UI.WinForms.GunaLineTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.addpackagetext = new System.Windows.Forms.Label();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.gunaShadowPanel1.SuspendLayout();
             this.picturepanel.SuspendLayout();
-            this.imagepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.imagepanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaShadowPanel1
             // 
+            this.gunaShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.Lavender;
             this.gunaShadowPanel1.Controls.Add(this.picturepanel);
@@ -53,7 +56,7 @@
             this.gunaShadowPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(857, 544);
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(857, 489);
             this.gunaShadowPanel1.TabIndex = 0;
             // 
             // picturepanel
@@ -61,10 +64,21 @@
             this.picturepanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picturepanel.Controls.Add(this.pictureBox);
-            this.picturepanel.Location = new System.Drawing.Point(1, 83);
+            this.picturepanel.Location = new System.Drawing.Point(15, 83);
             this.picturepanel.Name = "picturepanel";
-            this.picturepanel.Size = new System.Drawing.Size(854, 448);
+            this.picturepanel.Size = new System.Drawing.Size(815, 281);
             this.picturepanel.TabIndex = 5;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox.Location = new System.Drawing.Point(3, 1);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(809, 280);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
             // 
             // imagepanel
             // 
@@ -164,14 +178,6 @@
             this.addpackagetext.TabIndex = 3;
             this.addpackagetext.Text = "ADD IMAGE";
             // 
-            // pictureBox
-            // 
-            this.pictureBox.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(854, 448);
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
-            // 
             // addimage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,13 +185,13 @@
             this.Controls.Add(this.gunaShadowPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "addimage";
-            this.Size = new System.Drawing.Size(857, 547);
+            this.Size = new System.Drawing.Size(857, 489);
             this.gunaShadowPanel1.ResumeLayout(false);
             this.gunaShadowPanel1.PerformLayout();
             this.picturepanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.imagepanel.ResumeLayout(false);
             this.imagepanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

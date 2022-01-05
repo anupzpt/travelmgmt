@@ -68,20 +68,23 @@ namespace TravelManagement
 
         private void right_Click(object sender, EventArgs e)
         {
-            MyGlobal.ticketbook = 1;
+            MyGlobal.Tripprice = 1;
 
         }
 
         private void left_Click(object sender, EventArgs e)
         {
             i = 0;
-            MyGlobal.ticketbook = 1;
+            MyGlobal.Tripprice = 1;
 
         }
-
+        public void setvalue()
+        {
+            i = 0;
+        }
         private void Refreshtimer_Tick(object sender, EventArgs e)
         {
-            if (MyGlobal.ticketbook == 1)
+            if (MyGlobal.Tripprice == 1)
             {
                 SqlConnection con = new SqlConnection(MyGlobal.constring);
                 try
@@ -107,9 +110,8 @@ namespace TravelManagement
                             ticketno.Text = dt.Rows[i]["ticketno"].ToString();
                             imagepicturebox.Text = dt.Rows[i]["picture"].ToString();
                             imagepicturebox.Image = Image.FromFile(imagepicturebox.Text);
-                            MyGlobal.ticketbook = 0;
+                            MyGlobal.Tripprice = 0;
                             //   MessageBox.Show(i.ToString());
-
                         }
                     }
                     catch (Exception)
@@ -130,18 +132,24 @@ namespace TravelManagement
                 }
             }
         }
-
+        
         private void updatebutton_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(MyGlobal.constring);
-
-           try
+            int calculate;
+            int price = Convert.ToInt32(trippricetextbox.Text);
+            int quantity = Convert.ToInt32(quantitytextbox.Text);
+            calculate = price * quantity;
+            try
             {
                 con.Open();
-              string query ="Update booking set date='"+ datetextbox.Text +"',quantity='" +quantitytextbox.Text + "' Where CONVERT (VARCHAR , ticketno)='" + ticketno.Text + "'";
+              string query ="Update booking set date='"+ datetextbox.Text +"',quantity='" +quantitytextbox.Text + "',totalprice='" + calculate.ToString() + "' Where CONVERT (VARCHAR , ticketno)='" + ticketno.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 sda.SelectCommand.ExecuteNonQuery();
                 MessageBox.Show("Updated Successfully");
+                totalpricetextbox.Text = calculate.ToString();
+
+
             }
             catch (Exception)
             {

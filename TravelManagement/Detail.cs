@@ -239,12 +239,10 @@ namespace TravelManagement
                     MyGlobal.tripprice = tripprice1;
                     MyGlobal.image = image;
                     int calculate;
-                   // MessageBox.Show(tripprice1);
                     int price = Convert.ToInt32(MyGlobal.tripprice);
                     int quantity = Convert.ToInt32(MyGlobal.quantity);
                     calculate = price * quantity;
                     MyGlobal.totalprice = calculate.ToString();
-                    //MessageBox.Show("pro");
                 }
                 else
                 {
@@ -273,7 +271,11 @@ namespace TravelManagement
         private void Email_MouseDown(object sender, MouseEventArgs e)
         {
             Email.Text = null;
-
+            string temp = Phone.Text;
+            if(temp.Length<10)
+            {
+                validlabel.Visible = true;
+            }
         }
 
         private void Quantity_MouseDown(object sender, MouseEventArgs e)
@@ -299,6 +301,13 @@ namespace TravelManagement
 
         private void Crossbutton_Click(object sender, EventArgs e)
         {
+            tourinnepal tourinnepal = new tourinnepal();
+            tourinnepal.Sample();
+            treakinginnepal treakinginnepal = new treakinginnepal();
+            treakinginnepal.Sample();
+            explorenepal explorenepal = new explorenepal();
+            explorenepal.Sample();
+            MyGlobal.globalcross = 1;
             MyGlobal.closedetail = 1;
             MyGlobal.crossbuttonclick = 1;
         }

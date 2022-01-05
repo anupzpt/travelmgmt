@@ -25,7 +25,9 @@ namespace TravelManagement
             Printbutton.Visible = false;
             MyGlobal.updatebutton = 1;
             MyGlobal.updatetimer = 1;
-            MyGlobal.ticketbook = 1;
+            MyGlobal.Tripprice = 1;
+
+            updateuser.setvalue();
         }
 
         private void Deletebutton_Click(object sender, EventArgs e)
@@ -43,12 +45,13 @@ namespace TravelManagement
 
         private void Booked_Click(object sender, EventArgs e)
         {
-            
+           // MessageBox.Show("clicked");
             bookeduser.Visible = true;
             Printbutton.Visible = true;
             updateuser.Visible = false;
             MyGlobal.bookedbutton = 1;
-            MyGlobal.ticketbook = 1;
+            MyGlobal.Tripprice = 1;
+            bookeduser.setvalue();
         }
         int xheight, xwidth;
 
@@ -71,7 +74,7 @@ namespace TravelManagement
             Graphics captureGraphics = Graphics.FromImage(captureBitmap);
             captureGraphics.CopyFromScreen(captureRectangle.Left, captureRectangle.Top, -200, -295, captureRectangle.Size);
             captureBitmap.Save(@"D:\Capture.jpg", ImageFormat.Jpeg);
-            MessageBox.Show("Screen Captured");
+            MessageBox.Show("Printed Successfully");
 
 
 

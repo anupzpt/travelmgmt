@@ -88,15 +88,10 @@ namespace TravelManagement
 
         private void right_Click(object sender, EventArgs e)
         {
-            if (countrightclick == 0)
-            {
-                SN = SN + 5;
-                countleftclick = 0;
-                countrightclick++;
-            }
             SqlConnection con = new SqlConnection(MyGlobal.constring);
             con.Open();
             int count = 1;
+            int temp = 0;
             for (int i = 1; i <= 4; i++)
             {
                 try
@@ -130,6 +125,63 @@ namespace TravelManagement
                 }
                 catch (Exception ex)
                 {
+                    int j = 0;
+                    if (count == 2)
+                    {
+                        for (j = 0; j < 3; j++)
+                        {
+                            if (j == 0)
+                            {
+                                pictureBox2.Visible = false;
+                                hikebutton2.Visible = false;
+                                hikelabel2.Visible = false;
+                            }
+                            if (j == 1)
+                            {
+                                pictureBox3.Visible = false;
+                                hikebutton3.Visible = false;
+                                hikelabel3.Visible = false;
+                            }
+                            if (j == 2)
+                            {
+                                pictureBox4.Visible = false;
+                                hikebutton4.Visible = false;
+                                hikelabel4.Visible = false;
+                            }
+                        }
+                    }
+                    if (count == 3)
+                    {
+
+                        for (j = 0; j < 2; j++)
+                        {
+                            if (j == 0)
+                            {
+                                pictureBox3.Visible = false;
+                                hikebutton3.Visible = false;
+                                hikelabel3.Visible = false;
+                            }
+                            if (j == 1)
+                            {
+                                pictureBox4.Visible = false;
+                                hikebutton4.Visible = false;
+                                hikelabel4.Visible = false;
+                            }
+                        }
+                    }
+                    if (count == 4)
+                    {
+                        for (j = 0; j < 1; j++)
+                        {
+                            if (j == 0)
+                            {
+                                pictureBox4.Visible = false;
+                                hikebutton4.Visible = false;
+                                hikelabel4.Visible = false;
+                            }
+                        }
+                    }
+
 
                 }
                 finally
@@ -139,16 +191,23 @@ namespace TravelManagement
             }
 
         }
-
-       
-
         private void left_Click(object sender, EventArgs e)
         {
-            if (countleftclick == 0)            {                SN = SN - 5;                countleftclick++;                countrightclick = 0;            }
+            pictureBox2.Visible = true;
+            hikebutton2.Visible = true;
+            hikelabel2.Visible = true;
+            pictureBox3.Visible = true;
+            hikebutton3.Visible = true;
+            hikelabel3.Visible = true;
+            pictureBox4.Visible = true;
+            hikebutton4.Visible = true;
+            hikelabel4.Visible = true;
+
+            countrightclick = 0;
             SqlConnection con = new SqlConnection(MyGlobal.constring);
             con.Open();
             int count = 1;
-            for (int i = 1; i <= 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 try
                 {
@@ -156,27 +215,28 @@ namespace TravelManagement
                     SqlDataAdapter sda = new SqlDataAdapter(image, con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
-                    string destination = dt.Rows[SN]["treklocation"].ToString();
-                    string label = dt.Rows[SN]["trekpricelabel"].ToString();
-                    string bestpanel = dt.Rows[SN]["trekpicture"].ToString();
-                    button1value = dt.Rows[SN]["SN"].ToString();
-                    if (count == 1)                    {                        SN = SN - 1;
-                        pictureBox4.Image = Image.FromFile(bestpanel);
-                        hikebutton4.Text = destination;
-                        hikelabel4.Text = label;
-                    }                    if (count == 2)                    {                        SN = SN - 1;
-                        pictureBox3.Image = Image.FromFile(bestpanel);
-                        hikebutton3.Text = destination;
-                        hikelabel3.Text = label;
-                    }                    if (count == 3)                    {                        SN = SN - 1;
-                        pictureBox2.Image = Image.FromFile(bestpanel);
-                        hikebutton2.Text = destination;
-                        hikelabel2.Text = label;
-                    }                    if (count == 4)                    {                        SN = SN - 1;
+                    string destination = dt.Rows[i]["treklocation"].ToString();
+                    string label = dt.Rows[i]["trekpricelabel"].ToString();
+                    string bestpanel = dt.Rows[i]["trekpicture"].ToString();
+                    button1value = dt.Rows[i]["SN"].ToString();
+                    if (count == 1)                    {                        //SN = SN - 1;
                         pictureBox1.Image = Image.FromFile(bestpanel);
                         hikebutton1.Text = destination;
                         hikelabel1.Text = label;
-                        count = 1;                    }                    count++;
+                    }                    if (count == 2)                    {                        //SN = SN - 1;
+                        pictureBox2.Image = Image.FromFile(bestpanel);
+                        hikebutton2.Text = destination;
+                        hikelabel2.Text = label;
+                    }                    if (count == 3)                    {                        //SN = SN -1;
+                        pictureBox3.Image = Image.FromFile(bestpanel);
+                        hikebutton3.Text = destination;
+                        hikelabel3.Text = label;
+                    }                    if (count == 4)                    {                        //SN = SN - 1;
+                        pictureBox4.Image = Image.FromFile(bestpanel);
+                        hikebutton4.Text = destination;
+                        hikelabel4.Text = label;
+
+                    }                    count++;
 
                 }
                 catch (Exception ex)
@@ -185,6 +245,8 @@ namespace TravelManagement
                 }
                 finally
                 {
+                    SN = i;
+                    SN++;
                     con.Close();
                 }
             }
@@ -256,4 +318,7 @@ namespace TravelManagement
             Crossbutton.Visible = false;
         }
     }
+    
 }
+
+

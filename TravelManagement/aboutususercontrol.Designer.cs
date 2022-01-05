@@ -28,28 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lastpanel = new TravelManagement.lastpanel();
-            this.aboutusdetail = new TravelManagement.aboutusdetail();
             this.aboutus = new TravelManagement.Aboutus();
+            this.aboutusdetail = new TravelManagement.aboutusdetail();
+            this.lastpanel = new TravelManagement.lastpanel();
             this.SuspendLayout();
-            // 
-            // lastpanel
-            // 
-            this.lastpanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lastpanel.Location = new System.Drawing.Point(0, 0);
-            this.lastpanel.Name = "lastpanel";
-            this.lastpanel.Size = new System.Drawing.Size(738, 208);
-            this.lastpanel.TabIndex = 0;
-            // 
-            // aboutusdetail
-            // 
-            this.aboutusdetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.aboutusdetail.Location = new System.Drawing.Point(0, 0);
-            this.aboutusdetail.Name = "aboutusdetail";
-            this.aboutusdetail.Size = new System.Drawing.Size(738, 430);
-            this.aboutusdetail.TabIndex = 1;
             // 
             // aboutus
             // 
@@ -57,8 +39,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.aboutus.Location = new System.Drawing.Point(0, 0);
             this.aboutus.Name = "aboutus";
-            this.aboutus.Size = new System.Drawing.Size(738, 400);
+            this.aboutus.Size = new System.Drawing.Size(704, 400);
             this.aboutus.TabIndex = 2;
+            // 
+            // aboutusdetail
+            // 
+            this.aboutusdetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.aboutusdetail.Location = new System.Drawing.Point(0, 0);
+            this.aboutusdetail.Name = "aboutusdetail";
+            this.aboutusdetail.Size = new System.Drawing.Size(704, 430);
+            this.aboutusdetail.TabIndex = 1;
+            // 
+            // lastpanel
+            // 
+            this.lastpanel.Location = new System.Drawing.Point(0, 0);
+            this.lastpanel.Name = "lastpanel";
+            this.lastpanel.Size = new System.Drawing.Size(704, 48);
+            this.lastpanel.TabIndex = 3;
             // 
             // aboutususercontrol
             // 
@@ -69,16 +67,15 @@
             this.Controls.Add(this.aboutusdetail);
             this.Controls.Add(this.lastpanel);
             this.Name = "aboutususercontrol";
-            this.Size = new System.Drawing.Size(738, 400);
+            this.Size = new System.Drawing.Size(704, 383);
             this.Load += new System.EventHandler(this.aboutususercontrol_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private lastpanel lastpanel;
         private aboutusdetail aboutusdetail;
         private Aboutus aboutus;
+        private lastpanel lastpanel;
     }
 }

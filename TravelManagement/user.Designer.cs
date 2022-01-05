@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.usermainpanel = new System.Windows.Forms.Panel();
-            this.Printbutton = new Guna.UI.WinForms.GunaGradientButton();
             this.bookeduser = new TravelManagement.bookeduser();
             this.updateuser = new TravelManagement.updateuser();
-            this.Updatebutton = new Guna.UI.WinForms.GunaGradientButton();
-            this.Booked = new Guna.UI.WinForms.GunaGradientButton();
             this.panelforbutton = new System.Windows.Forms.Panel();
+            this.Printbutton = new Guna.UI.WinForms.GunaGradientButton();
+            this.Booked = new Guna.UI.WinForms.GunaGradientButton();
+            this.Updatebutton = new Guna.UI.WinForms.GunaGradientButton();
             this.usermainpanel.SuspendLayout();
             this.panelforbutton.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,38 @@
             this.usermainpanel.Name = "usermainpanel";
             this.usermainpanel.Size = new System.Drawing.Size(857, 450);
             this.usermainpanel.TabIndex = 2;
+            // 
+            // bookeduser
+            // 
+            this.bookeduser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookeduser.Location = new System.Drawing.Point(2, 54);
+            this.bookeduser.Name = "bookeduser";
+            this.bookeduser.Size = new System.Drawing.Size(855, 392);
+            this.bookeduser.TabIndex = 13;
+            // 
+            // updateuser
+            // 
+            this.updateuser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateuser.Location = new System.Drawing.Point(2, 54);
+            this.updateuser.Name = "updateuser";
+            this.updateuser.Size = new System.Drawing.Size(855, 392);
+            this.updateuser.TabIndex = 11;
+            // 
+            // panelforbutton
+            // 
+            this.panelforbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelforbutton.BackColor = System.Drawing.Color.Transparent;
+            this.panelforbutton.Controls.Add(this.Printbutton);
+            this.panelforbutton.Controls.Add(this.Booked);
+            this.panelforbutton.Controls.Add(this.Updatebutton);
+            this.panelforbutton.Location = new System.Drawing.Point(0, 0);
+            this.panelforbutton.Name = "panelforbutton";
+            this.panelforbutton.Size = new System.Drawing.Size(854, 54);
+            this.panelforbutton.TabIndex = 1;
             // 
             // Printbutton
             // 
@@ -84,53 +116,6 @@
             this.Printbutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Printbutton.Click += new System.EventHandler(this.Printbutton_Click);
             // 
-            // bookeduser
-            // 
-            this.bookeduser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bookeduser.Location = new System.Drawing.Point(2, 54);
-            this.bookeduser.Name = "bookeduser";
-            this.bookeduser.Size = new System.Drawing.Size(855, 392);
-            this.bookeduser.TabIndex = 13;
-            // 
-            // updateuser
-            // 
-            this.updateuser.Location = new System.Drawing.Point(2, 54);
-            this.updateuser.Name = "updateuser";
-            this.updateuser.Size = new System.Drawing.Size(855, 392);
-            this.updateuser.TabIndex = 11;
-            // 
-            // Updatebutton
-            // 
-            this.Updatebutton.AnimationHoverSpeed = 0.07F;
-            this.Updatebutton.AnimationSpeed = 0.03F;
-            this.Updatebutton.BackColor = System.Drawing.Color.Transparent;
-            this.Updatebutton.BaseColor1 = System.Drawing.SystemColors.AppWorkspace;
-            this.Updatebutton.BaseColor2 = System.Drawing.Color.LightSlateGray;
-            this.Updatebutton.BorderColor = System.Drawing.Color.Navy;
-            this.Updatebutton.BorderSize = 1;
-            this.Updatebutton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Updatebutton.FocusedColor = System.Drawing.Color.Empty;
-            this.Updatebutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Updatebutton.ForeColor = System.Drawing.Color.White;
-            this.Updatebutton.Image = null;
-            this.Updatebutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.Updatebutton.Location = new System.Drawing.Point(158, 6);
-            this.Updatebutton.Name = "Updatebutton";
-            this.Updatebutton.OnHoverBaseColor1 = System.Drawing.Color.LightGray;
-            this.Updatebutton.OnHoverBaseColor2 = System.Drawing.Color.DarkGray;
-            this.Updatebutton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.Updatebutton.OnHoverForeColor = System.Drawing.Color.Gainsboro;
-            this.Updatebutton.OnHoverImage = null;
-            this.Updatebutton.OnPressedColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Updatebutton.Radius = 3;
-            this.Updatebutton.Size = new System.Drawing.Size(113, 42);
-            this.Updatebutton.TabIndex = 8;
-            this.Updatebutton.Text = "UPDATE";
-            this.Updatebutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Updatebutton.Click += new System.EventHandler(this.Updatebutton_Click);
-            // 
             // Booked
             // 
             this.Booked.AnimationHoverSpeed = 0.07F;
@@ -161,18 +146,35 @@
             this.Booked.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Booked.Click += new System.EventHandler(this.Booked_Click);
             // 
-            // panelforbutton
+            // Updatebutton
             // 
-            this.panelforbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelforbutton.BackColor = System.Drawing.Color.Transparent;
-            this.panelforbutton.Controls.Add(this.Printbutton);
-            this.panelforbutton.Controls.Add(this.Booked);
-            this.panelforbutton.Controls.Add(this.Updatebutton);
-            this.panelforbutton.Location = new System.Drawing.Point(0, 0);
-            this.panelforbutton.Name = "panelforbutton";
-            this.panelforbutton.Size = new System.Drawing.Size(854, 54);
-            this.panelforbutton.TabIndex = 1;
+            this.Updatebutton.AnimationHoverSpeed = 0.07F;
+            this.Updatebutton.AnimationSpeed = 0.03F;
+            this.Updatebutton.BackColor = System.Drawing.Color.Transparent;
+            this.Updatebutton.BaseColor1 = System.Drawing.SystemColors.AppWorkspace;
+            this.Updatebutton.BaseColor2 = System.Drawing.Color.LightSlateGray;
+            this.Updatebutton.BorderColor = System.Drawing.Color.Navy;
+            this.Updatebutton.BorderSize = 1;
+            this.Updatebutton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Updatebutton.FocusedColor = System.Drawing.Color.Empty;
+            this.Updatebutton.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Updatebutton.ForeColor = System.Drawing.Color.White;
+            this.Updatebutton.Image = null;
+            this.Updatebutton.ImageSize = new System.Drawing.Size(20, 20);
+            this.Updatebutton.Location = new System.Drawing.Point(158, 6);
+            this.Updatebutton.Name = "Updatebutton";
+            this.Updatebutton.OnHoverBaseColor1 = System.Drawing.Color.LightGray;
+            this.Updatebutton.OnHoverBaseColor2 = System.Drawing.Color.DarkGray;
+            this.Updatebutton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.Updatebutton.OnHoverForeColor = System.Drawing.Color.Gainsboro;
+            this.Updatebutton.OnHoverImage = null;
+            this.Updatebutton.OnPressedColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Updatebutton.Radius = 3;
+            this.Updatebutton.Size = new System.Drawing.Size(113, 42);
+            this.Updatebutton.TabIndex = 8;
+            this.Updatebutton.Text = "UPDATE";
+            this.Updatebutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Updatebutton.Click += new System.EventHandler(this.Updatebutton_Click);
             // 
             // user
             // 

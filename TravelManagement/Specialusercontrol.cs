@@ -22,7 +22,10 @@ namespace TravelManagement
             special.Size = new Size(1360, 489);
             specialdetail.Location = new Point(0, 492);
             specialdetail.Size = new Size(1360, 400);
-            lastpanel.Location = new Point(0, 1000);
+          tourlastpanel.Location = new Point(0, 950);
+            tourlastpanel.Size = new Size(1360, 200);
+           lastpanel.Location = new Point(0, 1000);
+           lastpanel.Size = new Size(1360, 200);
         }
     }
 }

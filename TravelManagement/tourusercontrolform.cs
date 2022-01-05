@@ -24,6 +24,8 @@ namespace TravelManagement
             tourinnepal.Size = new Size(1360, 457);
             tourlastpanel.Location = new Point(0, 1000);
             tourlastpanel.Size = new Size(1360, 207);
+            lastpanel.Location = new Point(0, 800);
+            lastpanel.Size = new Size(1360, 200);
         }
     }
 }
