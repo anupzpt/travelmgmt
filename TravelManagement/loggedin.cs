@@ -38,7 +38,6 @@ namespace TravelManagement
         private void loginbutton_Click_1(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(MyGlobal.constring);
-
             try
             {
                 con.Open();
@@ -72,7 +71,10 @@ namespace TravelManagement
                     passwordtextbox.Text = null;
                 }
             }
-            catch (Exception) { }
+            catch (Exception)
+            {
+                    MessageBox.Show(" LOGIN UNSUCCESSFUL ");
+            }
             finally
             {
                 con.Close();

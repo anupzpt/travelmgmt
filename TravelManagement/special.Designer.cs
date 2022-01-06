@@ -46,7 +46,7 @@
             this.specialimagepanel.Controls.Add(this.experiencetext);
             this.specialimagepanel.Location = new System.Drawing.Point(0, 0);
             this.specialimagepanel.Name = "specialimagepanel";
-            this.specialimagepanel.Size = new System.Drawing.Size(840, 400);
+            this.specialimagepanel.Size = new System.Drawing.Size(823, 400);
             this.specialimagepanel.TabIndex = 2;
             // 
             // left
@@ -74,7 +74,7 @@
             this.right.DialogResult = System.Windows.Forms.DialogResult.None;
             this.right.Image = null;
             this.right.ImageSize = new System.Drawing.Size(64, 64);
-            this.right.Location = new System.Drawing.Point(790, 180);
+            this.right.Location = new System.Drawing.Point(773, 180);
             this.right.Name = "right";
             this.right.OnHoverImage = null;
             this.right.OnHoverImageOffset = new System.Drawing.Point(0, 0);

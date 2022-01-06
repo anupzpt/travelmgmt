@@ -55,6 +55,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.addpackagetext = new System.Windows.Forms.Label();
             this.timerbook = new System.Windows.Forms.Timer(this.components);
+            this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.booking.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagepicturebox)).BeginInit();
@@ -394,6 +395,10 @@
             // 
             this.timerbook.Tick += new System.EventHandler(this.timerbook_Tick);
             // 
+            // Refreshtimer
+            // 
+            this.Refreshtimer.Tick += new System.EventHandler(this.Refreshtimer_Tick);
+            // 
             // bookeduser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,5 +444,6 @@
         private System.Windows.Forms.Timer timerbook;
         private System.Windows.Forms.Button right;
         private System.Windows.Forms.Button left;
+        private System.Windows.Forms.Timer Refreshtimer;
     }
 }

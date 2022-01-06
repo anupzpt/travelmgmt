@@ -46,7 +46,7 @@
             this.tourimagepanel.Controls.Add(this.tourtext);
             this.tourimagepanel.Location = new System.Drawing.Point(0, 0);
             this.tourimagepanel.Name = "tourimagepanel";
-            this.tourimagepanel.Size = new System.Drawing.Size(840, 400);
+            this.tourimagepanel.Size = new System.Drawing.Size(807, 400);
             this.tourimagepanel.TabIndex = 1;
             // 
             // left
@@ -74,7 +74,7 @@
             this.right.DialogResult = System.Windows.Forms.DialogResult.None;
             this.right.Image = null;
             this.right.ImageSize = new System.Drawing.Size(64, 64);
-            this.right.Location = new System.Drawing.Point(790, 180);
+            this.right.Location = new System.Drawing.Point(757, 180);
             this.right.Name = "right";
             this.right.OnHoverImage = null;
             this.right.OnHoverImageOffset = new System.Drawing.Point(0, 0);

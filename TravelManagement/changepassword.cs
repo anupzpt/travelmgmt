@@ -52,6 +52,8 @@ namespace TravelManagement
         {
             Eyetimer.Start();
             password.UseSystemPasswordChar = true;
+            newpassword.UseSystemPasswordChar = true;
+            savebutton.Enabled = false;
         }
 
         private void Eyetimer_Tick(object sender, EventArgs e)
@@ -59,11 +61,13 @@ namespace TravelManagement
             if (button == 1)
             {
                 password.UseSystemPasswordChar = false;
+                newpassword.UseSystemPasswordChar = false;
                 button = 0;
             }
             if (button == 2)
             {
                 password.UseSystemPasswordChar = true;
+                newpassword.UseSystemPasswordChar = true;
                 button = 0;
             }
         }
@@ -107,12 +111,29 @@ namespace TravelManagement
             {
                 password.ForeColor = Color.Green;
                 newpassword.Enabled = true;
+                savebutton.Enabled = true;
             }
             else
             {
                 password.ForeColor = Color.Red;
                 newpassword.Enabled = false;
+                savebutton.Enabled = false;
             }
+        }
+
+        private void usernametext_Enter(object sender, EventArgs e)
+        {
+            usernametext.Text = null;
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            password.Text = null;
+        }
+
+        private void newpassword_Enter(object sender, EventArgs e)
+        {
+            newpassword.Text = null;
         }
     }
 }

@@ -54,6 +54,7 @@
             // 
             this.rewrite.BackColor = System.Drawing.Color.WhiteSmoke;
             this.rewrite.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rewrite.Enabled = false;
             this.rewrite.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.rewrite.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rewrite.ForeColor = System.Drawing.Color.Black;
@@ -219,6 +220,7 @@
             // 
             this.password.BackColor = System.Drawing.Color.WhiteSmoke;
             this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.password.Enabled = false;
             this.password.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.password.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.ForeColor = System.Drawing.Color.Black;
@@ -230,6 +232,7 @@
             this.password.Size = new System.Drawing.Size(237, 31);
             this.password.TabIndex = 2;
             this.password.Text = "PASSWORD";
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             this.password.Enter += new System.EventHandler(this.password_Enter);
             this.password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseClick);
             // 
@@ -237,6 +240,7 @@
             // 
             this.emailtextbox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.emailtextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.emailtextbox.Enabled = false;
             this.emailtextbox.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.emailtextbox.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailtextbox.ForeColor = System.Drawing.Color.Black;
@@ -249,7 +253,7 @@
             this.emailtextbox.TabIndex = 1;
             this.emailtextbox.Text = "EMAIL";
             this.emailtextbox.Enter += new System.EventHandler(this.emailtextbox_Enter);
-            this.emailtextbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseDown_1);
+            this.emailtextbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.emailtextbox_MouseDown);
             // 
             // usernametext
             // 
@@ -266,6 +270,7 @@
             this.usernametext.Size = new System.Drawing.Size(237, 31);
             this.usernametext.TabIndex = 0;
             this.usernametext.Text = "USERNAME";
+            this.usernametext.TextChanged += new System.EventHandler(this.usernametext_TextChanged);
             this.usernametext.Enter += new System.EventHandler(this.usernametext_Enter);
             this.usernametext.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernametext_MouseClick);
             // 

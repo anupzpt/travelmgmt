@@ -30,11 +30,11 @@ namespace TravelManagement
                 sda.SelectCommand.ExecuteNonQuery();
                 MyGlobal.logintimer = 1;
                 MessageBox.Show("REGISTERED SUCCESSFULLY");
-                usernametext.Text = null;
+                
             }
             catch (Exception)
             {
-                MessageBox.Show("not");
+                MessageBox.Show("User Name taken");
             }
         }
 
@@ -58,11 +58,13 @@ namespace TravelManagement
             if(viewbutton==1)
             {
                 password.UseSystemPasswordChar = false;
+                rewrite.UseSystemPasswordChar = false;
                 viewbutton = 0;
             }
             if(viewbutton==2)
             {
                 password.UseSystemPasswordChar = true;
+                rewrite.UseSystemPasswordChar = true;
                 viewbutton = 0;
             }
         }
@@ -71,6 +73,7 @@ namespace TravelManagement
         {
             Eyetimer.Start();
             password.UseSystemPasswordChar = true;
+            rewrite.UseSystemPasswordChar = true;
             donebutton.Enabled = false;
 
         }
@@ -110,13 +113,40 @@ namespace TravelManagement
         private void usernametext_Enter(object sender, EventArgs e)
         {
             usernametext.Text = null;
+            emailtextbox.Enabled = true;
 
         }
 
         private void emailtextbox_Enter(object sender, EventArgs e)
         {
             emailtextbox.Text = null;
+            SqlConnection con = new SqlConnection(MyGlobal.constring);
+            try
+            {
+                con.Open();
+                string query = "select *from login where Username='" + usernametext.Text + "'";
+                SqlDataAdapter sta = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                sta.Fill(dt);
+                string username = dt.Rows[0]["Username"].ToString();
+                MessageBox.Show("User Name Already Taken");
+                emailtextbox.Enabled = false;
+                password.Enabled = false;
+                rewrite.Enabled = false;
+                donebutton.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                emailtextbox.Enabled = true;
+               // emailtextbox.Text = "EMAIL";
+                password.Enabled = true;
+                password.Text = "PASSWORD";
+                rewrite.Enabled = true;
+                rewrite.Text = "RE-ENTER";
+                donebutton.Enabled = true;
 
+            }
+            
         }
 
         private void password_Enter(object sender, EventArgs e)
@@ -127,6 +157,32 @@ namespace TravelManagement
         private void rewrite_Enter(object sender, EventArgs e)
         {
             rewrite.Text = null;
+        }
+
+        private void usernametext_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailtextbox_MouseDown(object sender, MouseEventArgs e)
+        {
+            //try
+            //{
+            //    SqlConnection con = new SqlConnection(MyGlobal.constring);
+            //    con.Open();
+            //    string query = "insert into login (Username) Values ('" + usernametext.Text + "')";
+            //    SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            //    sda.SelectCommand.ExecuteNonQuery();
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("User Name taken");
+            //}
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

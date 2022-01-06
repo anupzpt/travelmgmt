@@ -45,6 +45,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.havequestionpanel = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.titletext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.nametext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.messagetext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.emailtext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -53,8 +55,6 @@
             this.emaillabel = new System.Windows.Forms.Label();
             this.namelabel = new System.Windows.Forms.Label();
             this.havequestion = new System.Windows.Forms.Label();
-            this.titletext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gunaShadowPanel1.SuspendLayout();
             this.contactimagepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -267,6 +267,37 @@
             this.havequestionpanel.Size = new System.Drawing.Size(442, 414);
             this.havequestionpanel.TabIndex = 10;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Playfair Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(83, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 21);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Message Title";
+            // 
+            // titletext
+            // 
+            this.titletext.BackColor = System.Drawing.SystemColors.Control;
+            this.titletext.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.titletext.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titletext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.titletext.HintForeColor = System.Drawing.Color.Empty;
+            this.titletext.HintText = "";
+            this.titletext.isPassword = false;
+            this.titletext.LineFocusedColor = System.Drawing.Color.Blue;
+            this.titletext.LineIdleColor = System.Drawing.Color.Gray;
+            this.titletext.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.titletext.LineThickness = 4;
+            this.titletext.Location = new System.Drawing.Point(85, 226);
+            this.titletext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.titletext.Name = "titletext";
+            this.titletext.Size = new System.Drawing.Size(287, 38);
+            this.titletext.TabIndex = 2;
+            this.titletext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // nametext
             // 
             this.nametext.BackColor = System.Drawing.SystemColors.Control;
@@ -284,7 +315,7 @@
             this.nametext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nametext.Name = "nametext";
             this.nametext.Size = new System.Drawing.Size(287, 38);
-            this.nametext.TabIndex = 22;
+            this.nametext.TabIndex = 0;
             this.nametext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // messagetext
@@ -304,7 +335,7 @@
             this.messagetext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.messagetext.Name = "messagetext";
             this.messagetext.Size = new System.Drawing.Size(287, 38);
-            this.messagetext.TabIndex = 21;
+            this.messagetext.TabIndex = 3;
             this.messagetext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // emailtext
@@ -324,7 +355,7 @@
             this.emailtext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.emailtext.Name = "emailtext";
             this.emailtext.Size = new System.Drawing.Size(287, 38);
-            this.emailtext.TabIndex = 20;
+            this.emailtext.TabIndex = 1;
             this.emailtext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // submitbutton
@@ -352,7 +383,7 @@
             this.submitbutton.OnPressedColor = System.Drawing.Color.MistyRose;
             this.submitbutton.Radius = 8;
             this.submitbutton.Size = new System.Drawing.Size(93, 42);
-            this.submitbutton.TabIndex = 19;
+            this.submitbutton.TabIndex = 4;
             this.submitbutton.Text = "SUBMIT";
             this.submitbutton.Click += new System.EventHandler(this.submitbutton_Click);
             // 
@@ -399,37 +430,6 @@
             this.havequestion.Size = new System.Drawing.Size(253, 28);
             this.havequestion.TabIndex = 15;
             this.havequestion.Text = "HAVE ANY QUESTION ?";
-            // 
-            // titletext
-            // 
-            this.titletext.BackColor = System.Drawing.SystemColors.Control;
-            this.titletext.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.titletext.Font = new System.Drawing.Font("Playfair Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titletext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.titletext.HintForeColor = System.Drawing.Color.Empty;
-            this.titletext.HintText = "";
-            this.titletext.isPassword = false;
-            this.titletext.LineFocusedColor = System.Drawing.Color.Blue;
-            this.titletext.LineIdleColor = System.Drawing.Color.Gray;
-            this.titletext.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.titletext.LineThickness = 4;
-            this.titletext.Location = new System.Drawing.Point(85, 226);
-            this.titletext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.titletext.Name = "titletext";
-            this.titletext.Size = new System.Drawing.Size(287, 38);
-            this.titletext.TabIndex = 23;
-            this.titletext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Playfair Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 199);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 21);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Message Title";
             // 
             // Contactusdetail
             // 

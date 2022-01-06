@@ -31,6 +31,7 @@
             this.tour = new TravelManagement.tour();
             this.tourinnepal = new TravelManagement.tourinnepal();
             this.tourlastpanel = new TravelManagement.lastpanel();
+            this.lastpanel = new TravelManagement.lastpanel();
             this.SuspendLayout();
             // 
             // tour
@@ -39,7 +40,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tour.Location = new System.Drawing.Point(0, 0);
             this.tour.Name = "tour";
-            this.tour.Size = new System.Drawing.Size(806, 400);
+            this.tour.Size = new System.Drawing.Size(772, 400);
             this.tour.TabIndex = 2;
             // 
             // tourinnepal
@@ -48,17 +49,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tourinnepal.Location = new System.Drawing.Point(0, 0);
             this.tourinnepal.Name = "tourinnepal";
-            this.tourinnepal.Size = new System.Drawing.Size(806, 400);
+            this.tourinnepal.Size = new System.Drawing.Size(959, 400);
             this.tourinnepal.TabIndex = 3;
             // 
             // tourlastpanel
             // 
             this.tourlastpanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tourlastpanel.Location = new System.Drawing.Point(0, 0);
+            this.tourlastpanel.Location = new System.Drawing.Point(-9, 0);
             this.tourlastpanel.Name = "tourlastpanel";
-            this.tourlastpanel.Size = new System.Drawing.Size(806, 207);
+            this.tourlastpanel.Size = new System.Drawing.Size(968, 207);
             this.tourlastpanel.TabIndex = 4;
+            // 
+            // lastpanel
+            // 
+            this.lastpanel.Location = new System.Drawing.Point(0, 0);
+            this.lastpanel.Name = "lastpanel";
+            this.lastpanel.Size = new System.Drawing.Size(840, 48);
+            this.lastpanel.TabIndex = 5;
             // 
             // tourusercontrolform
             // 
@@ -68,8 +76,9 @@
             this.Controls.Add(this.tourinnepal);
             this.Controls.Add(this.tour);
             this.Controls.Add(this.tourlastpanel);
+            this.Controls.Add(this.lastpanel);
             this.Name = "tourusercontrolform";
-            this.Size = new System.Drawing.Size(806, 400);
+            this.Size = new System.Drawing.Size(755, 349);
             this.Load += new System.EventHandler(this.tourusercontrolform_Load);
             this.ResumeLayout(false);
 
@@ -79,5 +88,6 @@
         private tour tour;
         private tourinnepal tourinnepal;
         private lastpanel tourlastpanel;
+        private lastpanel lastpanel;
     }
 }

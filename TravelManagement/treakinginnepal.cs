@@ -151,11 +151,18 @@ namespace TravelManagement
                 detail.Visible = false;
             }
         }
+        public void Sample()
+        {
+            this.detail.Visible = false;
+        }
         int countrightclick = 0;
         int countleftclick = 0;
 
         private void left_Click(object sender, EventArgs e)
         {
+           // pictureBox1.Visible = true;
+            //trekbutton1.Visible = true;
+            //treklabel1.Visible = true;
             pictureBox2.Visible = true;
             trekbutton2.Visible = true;
             treklabel2.Visible = true;
@@ -256,17 +263,17 @@ namespace TravelManagement
                 catch (Exception ex)
                 {
                     int j=0;
-                    if (count==2)
+                    if (count == 2)
                     {
                         for (j = 0; j < 3; j++)
                         {
-                            if(j==0)
+                            if (j == 0)
                             {
-                                pictureBox2.Visible=false;
+                                pictureBox2.Visible = false;
                                 trekbutton2.Visible = false;
                                 treklabel2.Visible = false;
                             }
-                            if(j==1)
+                            if (j == 1)
                             {
                                 pictureBox3.Visible = false;
                                 trekbutton3.Visible = false;
@@ -279,21 +286,23 @@ namespace TravelManagement
                                 treklabel4.Visible = false;
                             }
                         }
+                    }
                         if(count==3)
                         {
+
                             for (j = 0; j < 2; j++)
                             {
-                                if (j == 0)
-                                {
-                                    pictureBox2.Visible = false;
-                                    trekbutton2.Visible = false;
-                                    treklabel2.Visible = false;
-                                }
-                                if (j == 1)
+                                if (j==0)
                                 {
                                     pictureBox3.Visible = false;
                                     trekbutton3.Visible = false;
                                     treklabel3.Visible = false;
+                                }
+                                if (j==1)
+                                {
+                                    pictureBox4.Visible = false;
+                                    trekbutton4.Visible = false;
+                                    treklabel4.Visible = false;
                                 }
                             }
                         }
@@ -303,14 +312,14 @@ namespace TravelManagement
                             {
                                 if (j == 0)
                                 {
-                                    pictureBox2.Visible = false;
-                                    trekbutton2.Visible = false;
-                                    treklabel2.Visible = false;
+                                    pictureBox4.Visible = false;
+                                    trekbutton4.Visible = false;
+                                    treklabel4.Visible = false;
                                 }
                             }
                         }
 
-                    }
+                    
                 }
                 finally
                 {

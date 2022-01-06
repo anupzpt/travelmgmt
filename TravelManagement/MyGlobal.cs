@@ -59,7 +59,7 @@ namespace TravelManagement
         public static string transport;
         public static string accomodation;
         public static string tripprice;
-        public static string ticketno;
+        public static int i;
         public static string image;
         public static int displaybooked;
         ////
@@ -71,6 +71,9 @@ namespace TravelManagement
         /////
         public static int globalcross;
         public static int adminpanneldataremove;
+        //
+        public static string Quantity;
+        public static int Tripprice;
 
 
 

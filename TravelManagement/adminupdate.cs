@@ -33,6 +33,7 @@ namespace TravelManagement
                 string query = "Update changepanel set Picture='" + imagetextbox.Text + "',Pricelabel='" + trippricetextbox.Text + "',Location='" + destinationtextbox.Text + "',Descripition='" + descriptiontextbox.Text + "',Duration='" + Durationtextbox.Text + "',Transport='" + transporttextbox.Text + "',tripprice='" + trippricetextbox.Text + "',Accomodation='" + accomodationtextbox.Text + "' Where CONVERT (VARCHAR , Location)='" + location + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 sda.SelectCommand.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully");
             }
             catch(Exception)
             {

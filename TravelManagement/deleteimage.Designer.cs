@@ -30,14 +30,12 @@
         {
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tour = new TravelManagement.tour();
             this.imagepanel = new System.Windows.Forms.Panel();
             this.selectComboBox = new Guna.UI.WinForms.GunaComboBox();
             this.selectdata = new System.Windows.Forms.Label();
             this.savebutton = new Guna.UI.WinForms.GunaGradientButton();
             this.addpackagetext = new System.Windows.Forms.Label();
             this.gunaShadowPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.imagepanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,20 +56,10 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.tour);
             this.panel2.Location = new System.Drawing.Point(1, 87);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(854, 366);
             this.panel2.TabIndex = 5;
-            // 
-            // tour
-            // 
-            this.tour.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tour.Location = new System.Drawing.Point(0, 0);
-            this.tour.Name = "tour";
-            this.tour.Size = new System.Drawing.Size(854, 363);
-            this.tour.TabIndex = 0;
             // 
             // imagepanel
             // 
@@ -158,7 +146,6 @@
             this.Size = new System.Drawing.Size(857, 450);
             this.gunaShadowPanel1.ResumeLayout(false);
             this.gunaShadowPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.imagepanel.ResumeLayout(false);
             this.imagepanel.PerformLayout();
             this.ResumeLayout(false);
@@ -169,7 +156,6 @@
 
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
         private System.Windows.Forms.Panel panel2;
-        private tour tour;
         private System.Windows.Forms.Panel imagepanel;
         private Guna.UI.WinForms.GunaComboBox selectComboBox;
         private System.Windows.Forms.Label selectdata;

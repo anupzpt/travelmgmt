@@ -136,6 +136,7 @@
             this.newpassword.TabIndex = 2;
             this.newpassword.Text = "NEW PASSWORD";
             this.newpassword.Click += new System.EventHandler(this.newpassword_Click);
+            this.newpassword.Enter += new System.EventHandler(this.newpassword_Enter);
             // 
             // password
             // 
@@ -154,6 +155,7 @@
             this.password.Text = "PASSWORD";
             this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             this.password.Click += new System.EventHandler(this.password_Click);
+            this.password.Enter += new System.EventHandler(this.password_Enter);
             // 
             // usernametext
             // 
@@ -171,6 +173,7 @@
             this.usernametext.TabIndex = 0;
             this.usernametext.Text = "USERNAME";
             this.usernametext.Click += new System.EventHandler(this.usernametext_Click);
+            this.usernametext.Enter += new System.EventHandler(this.usernametext_Enter);
             // 
             // gunaCircleButton3
             // 

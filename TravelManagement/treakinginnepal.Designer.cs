@@ -122,9 +122,9 @@
             this.treklabel1.ForeColor = System.Drawing.Color.Maroon;
             this.treklabel1.Location = new System.Drawing.Point(10, 218);
             this.treklabel1.Name = "treklabel1";
-            this.treklabel1.Size = new System.Drawing.Size(92, 20);
+            this.treklabel1.Size = new System.Drawing.Size(81, 20);
             this.treklabel1.TabIndex = 10;
-            this.treklabel1.Text = "NRS 15000";
+            this.treklabel1.Text = "RS 15000";
             // 
             // trekbutton1
             // 
